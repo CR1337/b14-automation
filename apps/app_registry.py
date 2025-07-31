@@ -1,4 +1,4 @@
-from model.app import App
+from webapp.app import App
 from typing import List
 
 # from apps.template_app.template_app import TemplateAppFactory

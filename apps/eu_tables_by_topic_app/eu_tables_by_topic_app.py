@@ -1,8 +1,8 @@
 import time
 import io
 import zipfile
-from model.app import App
-from model.app_factory import AppFactory
+from webapp.app import App
+from webapp.app_factory import AppFactory
 
 from lib.eu_tables_by_topic.eu_tables_by_topic import build_tables
 

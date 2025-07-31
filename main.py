@@ -1,3 +1,3 @@
-from model.webapp import WebApp
+from webapp.webapp import WebApp
 
 WebApp().run()

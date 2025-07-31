@@ -1,6 +1,6 @@
 import time
-from model.app import App
-from model.app_factory import AppFactory
+from webapp.app import App
+from webapp.app_factory import AppFactory
 
 
 class TemplateApp(App):

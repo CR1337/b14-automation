@@ -2,8 +2,8 @@ import time
 import pandas as pd
 from io import StringIO
 from datetime import date
-from model.app import App
-from model.app_factory import AppFactory
+from webapp.app import App
+from webapp.app_factory import AppFactory
 
 from lib.oecd_inflation.oecd_inflation import generate_dataframe
 

@@ -1,7 +1,7 @@
 import time
 from datetime import date
-from model.app import App
-from model.app_factory import AppFactory
+from webapp.app import App
+from webapp.app_factory import AppFactory
 
 from lib.auto_text.erwerbslosigkeit import ErwerbslosigkeitTextGenerator
 
