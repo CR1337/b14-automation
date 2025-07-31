@@ -7,8 +7,8 @@ import time
 from requests import ConnectionError
 from itertools import count
 
-from lib.eurostat_api.eurostat_api.dataset import EurostatDataset
-from lib.eurostat_api.eurostat_api.filters import TimePeriodFilter, DimensionFilter
+from lib.eurostat.eurostat_api.dataset import EurostatDataset
+from lib.eurostat.eurostat_api.filters import TimePeriodFilter, DimensionFilter
 from lib.data_formatter.data_formatter import DataFormatter
 from lib.table_builder.table_builder import TableBuilder
 

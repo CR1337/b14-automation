@@ -1,8 +1,8 @@
 from __future__ import annotations
 from lib.auto_text.abstract import EurostatAutoTextGenerator
 
-from lib.eurostat_api.eurostat_api.dataset import EurostatDataset
-from lib.eurostat_api.eurostat_api.filters import DimensionFilter, TimePeriodFilter
+from lib.eurostat.eurostat_api.dataset import EurostatDataset
+from lib.eurostat.eurostat_api.filters import DimensionFilter, TimePeriodFilter
 
 import lib.auto_text.util as u
 import pandas as pd
