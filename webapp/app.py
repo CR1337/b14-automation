@@ -1,9 +1,9 @@
-from model.app_io import AppIO
+from webapp.app_io import AppIO
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Tuple
-from model.localization import Localization
-from model.app_messenger import AppMessenger
-from model.file_access_mixin import FileAccessMixin
+from webapp.localization import Localization
+from webapp.app_messenger import AppMessenger
+from webapp.file_access_mixin import FileAccessMixin
 
 
 class App(ABC, FileAccessMixin):

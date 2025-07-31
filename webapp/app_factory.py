@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 import json
-from model.app import App
-from model.app_io import AppIO
-from model.file_access_mixin import FileAccessMixin
+from webapp.app import App
+from webapp.app_io import AppIO
+from webapp.file_access_mixin import FileAccessMixin
 from typing import Any, Dict, List, Tuple, Callable
 
 

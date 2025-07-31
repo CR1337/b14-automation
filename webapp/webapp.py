@@ -1,12 +1,12 @@
 import os
 import streamlit as st
 from apps.app_registry import apps
-from model.app import App
-from model.app_messenger import AppMessenger, MESSENGERS
+from webapp.app import App
+from webapp.app_messenger import AppMessenger, MESSENGERS
 from streamlit_autorefresh import st_autorefresh
-from model.localization import Localization
-from model.thread import ThreadWithResult
-from model.app_result import AppResult
+from webapp.localization import Localization
+from webapp.thread import ThreadWithResult
+from webapp.app_result import AppResult
 
 
 class WebApp:
