@@ -1,0 +1,49 @@
+{
+        "total_population": {
+            "dataset_id": "demo_gind",
+            "dimension_values": {
+                "indic_de": "JAN"
+            },
+            "decimal_places": 1,
+            "multiplier": 1e-6
+        },
+        "population_projections": {
+            "dataset_id": "proj_19np",
+            "dimension_values": {
+                "age": "TOTAL",
+                "projection": "BSL",
+                "sex": "T",
+                "unit": "PER"
+            },
+            "decimal_places": 1,
+            "multiplier": 1e-6
+        },
+        "total_fertility_rate": {
+            "dataset_id": "demo_find",
+            "dimension_values": {
+                "indic_de": "TOTFERRT"
+            },
+            "decimal_places": 2,
+            "multiplier": 1.0
+        },
+        "life_expectancy_f": {
+            "dataset_id": "demo_mlexpec",
+            "dimension_values": {
+                "age": "Y_LT1",
+                "sex": "F",
+                "unit": "YR"
+            },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "life_expectancy_m": {
+            "dataset_id": "demo_mlexpec",
+            "dimension_values": {
+                "age": "Y_LT1",
+                "sex": "M",
+                "unit": "YR"
+            },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        }
+    }

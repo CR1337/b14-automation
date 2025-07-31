@@ -1,0 +1,46 @@
+{
+        "employment_rate_age_group_1": {
+          "dataset_id": "lfsi_emp_a",
+          "dimension_values": {
+              "age": "Y20-64",
+              "indic_em": "EMP_LFS",
+              "sex": "T",
+              "unit": "PC_POP"
+          },
+          "decimal_places": 1,
+          "multiplier": 1.0
+        },
+        "employment_rate_age_group_2": {
+          "dataset_id": "lfsi_emp_a",
+          "dimension_values": {
+              "age": "Y55-64",
+              "indic_em": "EMP_LFS",
+              "sex": "T",
+              "unit": "PC_POP"
+          },
+          "decimal_places": 1,
+          "multiplier": 1.0
+        },
+        "unemployment_rate_age_group_1": {
+          "dataset_id": "lfsa_urgan",
+          "dimension_values": {
+              "age": "Y20-64",
+              "citizen": "TOTAL",
+              "sex": "T",
+              "unit": "PC"
+          },
+          "decimal_places": 1,
+          "multiplier": 1.0
+        },
+        "unemployment_rate_age_group_2": {
+          "dataset_id": "lfsa_urgan",
+          "dimension_values": {
+              "age": "Y15-24",
+              "citizen": "TOTAL",
+              "sex": "T",
+              "unit": "PC"
+          },
+          "decimal_places": 1,
+          "multiplier": 1.0
+        }
+    }

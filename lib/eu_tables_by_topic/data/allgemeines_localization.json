@@ -1,0 +1,38 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "land_area": {
+        "de": "Landfläche",
+        "en": "land area"
+    },
+    "bip": {
+        "de": "BIP je Einw.",
+        "en": "Gross domestic expenditure on Research and Development (R&D)"
+    },
+    "bip_unit": {
+        "de": "Euro",
+        "en": "euro"
+    },
+    "unemployment_rate": {
+        "de": "Erwerbslosenquote",
+        "en": "Unemployment rate"
+    },
+    "unemployment_rate_unit": {
+        "de": "% der Erwerbspersonen (20- bis 64-Jährige)",
+        "en": "% of active population (age 20 to 64)"
+    },
+    "onlineshopping_unit": {
+        "de": "% der Personen",
+        "en": "% of individuals"
+    },
+    "broadband_connection": {
+        "de": "Breitbandversorgung",
+        "en": "Broadband conncection"
+    },
+    "broadband_connection_unit": {
+        "de": "%",
+        "en": "% of households"
+    }
+}

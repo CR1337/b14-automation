@@ -1,0 +1,51 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "total_population": {
+        "de": "Bevölkerung insgesamt",
+        "en": "Total population"
+    },
+    "population_unit": {
+        "de": "Millionen",
+        "en": "millions"
+    },
+    "population_projections": {
+        "de": "Bevölkerungsvorausberechnung",
+        "en": "Population projections"
+    },
+    "population_projections_time": {
+        "de": "2060",
+        "en": "2060"
+    },
+    "total_fertility_rate": {
+        "de": "Zusammengefasste Geburtenziffer",
+        "en": "Total fertility rate"
+    },
+    "children_per_woman": {
+        "de": "Anzahl",
+        "en": "children per woman"
+    },
+    "life_expectancy": {
+        "de": "Lebens­erwartung in Jahren bei Geburt",
+        "en": "Life expectancy at birth"
+    },
+    "female": {
+        "de": "Frauen",
+        "en": "female"
+    },
+    "male": {
+        "de": "Männer",
+        "en": "male"
+    },
+    "life_expectancy_f_time": {
+        "de": "Frauen",
+        "en": "female"
+    },
+    "life_expectancy_m_time": {
+        "de": "Männer",
+        "en": "male"
+    }
+}
+

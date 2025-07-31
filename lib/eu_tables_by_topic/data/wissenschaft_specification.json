@@ -1,0 +1,40 @@
+{
+        "ausgaben": {
+            "dataset_id": "rd_e_gerdtot",
+            "dimension_values": {
+                "sectperf": "TOTAL",
+                "unit": "PC_GDP"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "frauen": {
+            "dataset_id": "rd_p_femres",
+            "dimension_values": {
+                "sectperf": "TOTAL",
+                "unit": "PC_HC"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "internet": {
+            "dataset_id": "isoc_ci_ifp_iu",
+            "dimension_values": {
+                "indic_is": "I_IU3",
+                "ind_type": "IND_TOTAL",
+                "unit": "PC_IND"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "breitband": {
+            "dataset_id": "isoc_cbs",
+            "dimension_values": {
+              "inet_spd": "MBPS_GT30",
+              "terrtypo": "TOTAL",
+              "unit": "PC_HH"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        }
+    }

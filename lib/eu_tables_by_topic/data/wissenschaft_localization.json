@@ -1,0 +1,38 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "gros_domestic_expenditure_on_research_and_development_rand": {
+        "de": "Ausgaben Forschung und Entwicklung (FuE)",
+        "en": "Gross domestic expenditure on Research and Development (R&D)"
+    },
+    "percent_of_gdp": {
+        "de": "% des BIP",
+        "en": "% of GDP"
+    },
+    "share_of_women_researchers": {
+        "de": "Frauen im Forschungsbereich",
+        "en": "Share of women researchers"
+    },
+    "percent_of_total_researchers": {
+        "de": "%",
+        "en": "% of total researchers"
+    },
+    "internet_use": {
+        "de": "Internetnutzung",
+        "en": "Internet use"
+    },
+    "percent_of_individuals_aged_16_to_74": {
+        "de": "% der 16- bis 74-J\u00e4hrigen",
+        "en": "% of individuals aged 16 to 74"
+    },
+    "broadband_aces": {
+        "de": "Breitbandzugang",
+        "en": "Broadband access"
+    },
+    "percent_of_households": {
+        "de": "% der Haushalte",
+        "en": "% of households"
+    }
+}

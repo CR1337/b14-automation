@@ -1,0 +1,31 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "exports": {
+        "de": "Warenausfuhr",
+        "en": "Exports"
+    },
+    "exports_unit": {
+        "de": "Millionen Euro",
+        "en": "million of EUR"
+    },
+    "imports": {
+        "de": "Wareneinfuhr",
+        "en": "Imports"
+    },
+    "imports_unit": {
+        "de": "Millionen Euro",
+        "en": "million of EUR"
+    },
+    "foreign_trade_balance": {
+        "de": "Außenhandelsbilanz",
+        "en": "Foreign trade balance"
+    },
+    "foreign_trade_balance_unit": {
+        "de": "Millionen Euro",
+        "en": "million of EUR"
+    }
+}
+

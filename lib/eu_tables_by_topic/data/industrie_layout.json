@@ -1,0 +1,94 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },
+            {
+                "text": "$[industry]",
+                "header": [
+                    {
+                        "text": "$[percent_of_gros_value_aded]",
+                        "header": [
+                            {
+                                "text": "${prod_gewerbe_wertsch_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[production:_manufacturing]",
+                "header": [
+                    {
+                        "text": "$[percent_change_on_previous_year]",
+                        "header": [
+                            {
+                                "text": "${prod_gewerbe_index_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[retail_trade:_turnover]",
+                "header": [
+                    {
+                        "text": "$[real_percent_change_on_previous_year]",
+                        "header": [
+                            {
+                                "text": "${einzelhandel_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[building_permits]",
+                "header": [
+                    {
+                        "text": "$[percent_change_on_previous_year]",
+                        "header": [
+                            {
+                                "text": "${baugenhemingungen_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "prod_gewerbe_wertsch",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "prod_gewerbe_index",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "einzelhandel",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "baugenhemingungen",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}

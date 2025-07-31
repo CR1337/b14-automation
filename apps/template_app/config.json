@@ -1,0 +1,26 @@
+{
+    "name": {
+        "de": "App Schablone",
+        "en": "Template App"
+    },
+    "inputs": [
+        {
+            "key": "name",
+            "name": {
+                "de": "Name",
+                "en": "Name"
+            },
+            "type": "str"
+        }
+    ],
+    "outputs": [
+        {
+            "key": "greeting",
+            "name": {
+                "de": "Begrüßung",
+                "en": "Greeting"
+            },
+            "type": "str"
+        }
+    ]
+}

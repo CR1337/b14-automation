@@ -1,0 +1,34 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "agriculture_forestry_fisheries": {
+        "de": "Land-, Forstwirtschaft, Fischerei",
+        "en": "Agriculture, forestry, fisheries"
+    },
+    "percent_of_gros_value_aded": {
+        "de": "% der Wertsch\u00f6pfung",
+        "en": "% of Gross value added"
+    },
+    "area_under_organic_farming": {
+        "de": "\u00d6kologischer Landbau",
+        "en": "Area under organic farming"
+    },
+    "percent_of_ua": {
+        "de": "in % der LF",
+        "en": "% of UAA"
+    },
+    "roundwod_production": {
+        "de": "Holzeinschlag",
+        "en": "Roundwood production"
+    },
+    "thousand_m\u00b3": {
+        "de": "Tausend m\u00b3",
+        "en": "thousand m\u00b3"
+    },
+    "fishing": {
+        "de": "Fischfang",
+        "en": "Fishing"
+    }
+}

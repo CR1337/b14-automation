@@ -1,0 +1,112 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },
+            {
+                "text": "$[land_area]",
+                "header": [
+                    {
+                        "text": "km²",
+                        "header": [
+                            {
+                                "text": "${land_area_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[bip]",
+                "header": [
+                    {
+                        "text": "$[bip_unit]",
+                        "header": [
+                            {
+                                "text": "${bip_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[unemployment_rate]",
+                "header": [
+                    {
+                        "text": "$[unemployment_rate_unit]",
+                        "header": [
+                            {
+                                "text": "${unemployment_rate_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "Onlineshopping",
+                "header": [
+                    {
+                        "text": "$[onlineshopping_unit]",
+                        "header": [
+                            {
+                                "text": "${onlineshopping_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[broadband_connection]",
+                "header": [
+                    {
+                        "text": "$[broadband_connection_unit]",
+                        "header": [
+                            {
+                                "text": "${broadband_connection_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "land_area",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "bip",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "unemployment_rate",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "onlineshopping",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "broadband_connection",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },
+            {
+                "text": "$[total_population]",
+                "header": [
+                    {
+                        "text": "$[population_unit]",
+                        "header": [
+                            {
+                                "text": "${total_population_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[population_projections]",
+                "header": [
+                    {
+                        "text": "$[population_unit]",
+                        "header": [
+                            {
+                                "text": "${population_projections_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[total_fertility_rate]",
+                "header": [
+                    {
+                        "text": "$[children_per_woman]",
+                        "header": [
+                            {
+                                "text": "${total_fertility_rate_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[life_expectancy]",
+                "header": [
+                    {
+                        "text": "$[female]",
+                        "header": [
+                            {
+                                "text": "${life_expectancy_f_time}",
+                                "header": []
+                            }
+                        ]
+                    },
+                    {
+                        "text": "$[male]",
+                        "header": [
+                            {
+                                "text": "${life_expectancy_m_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "total_population",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "population_projections",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "total_fertility_rate",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "life_expectancy_f",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "life_expectancy_m",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}
+

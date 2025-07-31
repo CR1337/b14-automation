@@ -1,0 +1,14 @@
+{
+    "initializing": {
+        "de": "Initialisiere...",
+        "en": "Initialising..."
+    },
+    "generating_tables": {
+        "de": "Erstelle Tabellen...",
+        "en": "Generating tables..."
+    },
+    "status_success": {
+        "de": "Die Tabellen wurden erfolgreich erstellt.",
+        "en": "Tables were generated successfully."
+    }
+}

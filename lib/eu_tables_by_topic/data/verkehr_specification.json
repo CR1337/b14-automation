@@ -1,0 +1,40 @@
+{
+        "fluggaeste": {
+            "dataset_id": "TTR00012",
+            "dimension_values": {
+                "schedule": "TOT",
+                "tra_cov": "TOTAL",
+                "tra_meas": "PAS_CRD",
+                "unit": "PAS"
+             },
+            "decimal_places": 1,
+            "multiplier": 1e-06
+        },
+        "pkw": {
+            "dataset_id": "tran_hv_psmod",
+            "dimension_values": {
+                "vehicle": "CAR",
+                "unit": "PC"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "zug": {
+            "dataset_id": "tran_hv_psmod",
+            "dimension_values": {
+                "vehicle": "TRN",
+                "unit": "PC"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "gueter": {
+            "dataset_id": "tran_hv_frmod",
+            "dimension_values": {
+                "tra_mode": "RAIL",
+                "unit": "PC"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        }
+    }

@@ -1,0 +1,44 @@
+{
+        "armut": {
+            "dataset_id": "ilc_peps01n",
+            "dimension_values": {
+                "age": "TOTAL",
+                "sex": "T",
+                "unit": "THS_PER"
+             },
+            "decimal_places": 1,
+            "multiplier": 0.001
+        },
+        "armutsgefahr": {
+            "dataset_id": "ilc_li02",
+            "dimension_values": {
+                "age": "TOTAL",
+                "indic_il": "LI_R_MD60",
+                "sex": "T",
+                "unit": "PC"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "wohnkosten": {
+            "dataset_id": "ilc_lvho07a",
+            "dimension_values": {
+                "age": "TOTAL",
+                "incgrp": "TOTAL",
+                "sex": "T",
+                "unit": "PC"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "ersparnisse": {
+            "dataset_id": "ilc_mdes04",
+            "dimension_values": {
+                "hhtyp": "TOTAL",
+                "incgrp": "TOTAL",
+                "unit": "PC"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        }
+    }

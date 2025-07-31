@@ -1,0 +1,61 @@
+{
+        "sek2": {
+            "dataset_id": "educ_uoe_perp04",
+            "dimension_values": {
+                "isced11": "ED3",
+                "unit": "RT"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "schulab": {
+            "dataset_id": "edat_lfse_14",
+            "dimension_values": {
+                "sex": "T",
+                "wstatus": "POP",
+                "unit": "PC"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "hochschul_f": {
+            "dataset_id": "edat_lfse_03",
+            "dimension_values": {
+                "age": "Y30-34",
+                "isced11": "ED5-8",
+                "sex": "F",
+                "unit": "PC"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "hochschul_m": {
+            "dataset_id": "edat_lfse_03",
+            "dimension_values": {
+                "age": "Y30-34",
+                "isced11": "ED5-8",
+                "sex": "M",
+                "unit": "PC"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "ausg_bildung": {
+            "dataset_id": "educ_uoe_fine06",
+            "dimension_values": {
+                "isced11": "ED02-8",
+                "unit": "PC_GDP"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "ausg_forschung": {
+            "dataset_id": "rd_e_gerdtot",
+            "dimension_values": {
+                "sectperf": "TOTAL",
+                "unit": "PC_GDP"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        }
+    }

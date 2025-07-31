@@ -1,0 +1,32 @@
+{
+        "exports": {
+            "dataset_id": "ext_lt_intertrd",
+            "dimension_values": {
+                "indic_et": "MIO_EXP_VAL",
+                "partner": "WORLD",
+                "sitc06": "TOTAL"
+            },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "imports": {
+            "dataset_id": "ext_lt_intertrd",
+            "dimension_values": {
+                "indic_et": "MIO_IMP_VAL",
+                "partner": "WORLD",
+                "sitc06": "TOTAL"
+            },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "foreign_trade_balance": {
+            "dataset_id": "ext_lt_intertrd",
+            "dimension_values": {
+                "indic_et": "MIO_BAL_VAL",
+                "partner": "WORLD",
+                "sitc06": "TOTAL"
+            },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        }
+    }

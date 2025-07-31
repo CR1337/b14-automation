@@ -1,0 +1,90 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },
+            {
+                "text": "$[emissions]",
+                "header": [
+                    {
+                        "text": "$[air_unit]",
+                        "header": [
+                            {
+                                "text": "${air_time}",
+                                "header": []
+                            }
+                        ]
+                    },
+                    {
+                        "text": "$[index_unit]",
+                        "header": [
+                            {
+                                "text": "${index_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[energy_dep]",
+                "header": [
+                    {
+                        "text": "$[energy_unit]",
+                        "header": [
+                            {
+                                "text": "${energy_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[renewable]",
+                "header": [
+                    {
+                        "text": "$[renew_unit]",
+                        "header": [
+                            {
+                                "text": "${renew_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            }            
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "air",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "index",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "energy",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "renew",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}
+

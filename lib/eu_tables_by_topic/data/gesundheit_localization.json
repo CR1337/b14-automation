@@ -1,0 +1,30 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "hospital_beds": {
+        "de": "Krankenhaus\u00adbetten",
+        "en": "Hospital beds"
+    },
+    "per_10_0_inh.": {
+        "de": "je 100 000 Einwohner/-innen",
+        "en": "per 100,000 inh."
+    },
+    "deaths_due_to_cancer": {
+        "de": "Todesf\u00e4lle durch Krebs",
+        "en": "Deaths due to cancer"
+    },
+    "healthy_life_years": {
+        "de": "Erwartete Zahl gesunder Lebensjahre",
+        "en": "Healthy life years"
+    },
+    "age_65_female": {
+        "de": "65-j\u00e4hrige Frauen ",
+        "en": "age 65, female"
+    },
+    "age_65_male": {
+        "de": "65-j\u00e4hrige M\u00e4nner",
+        "en": "age 65, male"
+    }
+}

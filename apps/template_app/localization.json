@@ -1,0 +1,18 @@
+{
+    "reading_name": {
+        "de": "Lese Namen...",
+        "en": "Reading names..."
+    },
+    "creating_greeting": {
+        "de": "Erstelle Begrüßung...",
+        "en": "Creating greeting..."
+    },
+    "outputting_greeting": {
+        "de": "Gebe Begrüßung aus",
+        "en": "Outputting greeting"
+    },
+    "hello": {
+        "de": "Hallo, {name}",
+        "en": "Hello, {name}"
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "air_transport_pasengers": {
+        "de": "Flugg\u00e4ste",
+        "en": "Air transport passengers"
+    },
+    "mn": {
+        "de": "Mill.",
+        "en": "mn"
+    },
+    "pasenger_transport": {
+        "de": "Personenbef\u00f6rderung",
+        "en": "Passenger transport"
+    },
+    "percent_pasenger_cars": {
+        "de": "% PKW",
+        "en": "% Passenger cars"
+    },
+    "percent_trains": {
+        "de": "% Zugverkehr",
+        "en": "% Trains"
+    },
+    "freight_transport": {
+        "de": "G\u00fcterverkehr",
+        "en": "Freight transport"
+    },
+    "percent_railways": {
+        "de": "% Schiene",
+        "en": "% Railways"
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },
+            {
+                "text": "$[air_transport_pasengers]",
+                "header": [
+                    {
+                        "text": "$[mn]",
+                        "header": [
+                            {
+                                "text": "${fluggaeste_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[pasenger_transport]",
+                "header": [
+                    {
+                        "text": "$[percent_pasenger_cars]",
+                        "header": [
+                            {
+                                "text": "${pkw_time}",
+                                "header": []
+                            }
+                        ]
+                    },
+                    {
+                        "text": "$[percent_trains]",
+                        "header": [
+                            {
+                                "text": "${zug_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[freight_transport]",
+                "header": [
+                    {
+                        "text": "$[percent_railways]",
+                        "header": [
+                            {
+                                "text": "${gueter_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "fluggaeste",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "pkw",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "zug",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "gueter",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}

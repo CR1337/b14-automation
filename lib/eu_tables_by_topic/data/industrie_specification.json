@@ -1,0 +1,45 @@
+{
+        "prod_gewerbe_wertsch": {
+            "dataset_id": "nama_10_a10",
+            "dimension_values": {
+                "nace_r2": "B-E",
+                "na_item": "B1G",
+                "unit": "PC_TOT"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "prod_gewerbe_index": {
+            "dataset_id": "sts_inpr_a",
+            "dimension_values": {
+                "indic_bt": "PRD",
+                "nace_r2": "C",
+                "s_adj": "CA",
+                "unit": "PCH_SM"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "einzelhandel": {
+            "dataset_id": "sts_trtu_a",
+            "dimension_values": {
+                "indic_bt": "VOL_SLS",
+                "nace_r2": "G47",
+                "s_adj": "CA",
+                "unit": "PCH_SM"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "baugenhemingungen": {
+            "dataset_id": "sts_cobp_a",
+            "dimension_values": {
+                "indic_bt": "BPRM_DW",
+                "cpa2_1": "CPA_F41001_X_410014",
+                "s_adj": "NSA",
+                "unit": "PCH_SM"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        }
+    }

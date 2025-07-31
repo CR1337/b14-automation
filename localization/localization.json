@@ -1,0 +1,22 @@
+{
+    "apps": {
+        "de": "Apps",
+        "en": "Apps"
+    },
+    "run_app": {
+        "de": "App starten",
+        "en": "Run App"
+    },
+    "restart": {
+        "de": "Neu starten",
+        "en": "Restart"
+    },
+    "language": {
+        "de": "Sprache",
+        "en": "Language"
+    },
+    "unexpected_error_message": {
+        "de": "Ein unerwarteter Fehler ist aufgetreten. Bitte senden Sie die untenstehenden Fehlerinformationen an den Administrator dieser App.",
+        "en": "An unexpected error has occurred. Please send the error information below to the administrator of this app."
+    }   
+}

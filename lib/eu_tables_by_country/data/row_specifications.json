@@ -1,0 +1,350 @@
+{
+    "capital": {
+        "type": "local"
+    },
+    "currency": {
+        "type": "local"
+    },
+    "land_area": {
+        "type": "data",
+        "key": "flaeche",
+        "decimal_places": 0,
+        "multiplier": 1.0
+    },
+    "gdp_total": {
+        "type": "data",
+        "key": "bip_euro",
+        "decimal_places": 0,
+        "multiplier": 0.001
+    },
+    "gdp_per_capita": {
+        "type": "data",
+        "key": "bip_einw",
+        "decimal_places": 0,
+        "multiplier": 1.0
+    },
+    "gdp_growth": {
+        "type": "data",
+        "key": "bip_aend",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "inflation": {
+        "type": "data",
+        "key": "inflation",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "gov_deficit": {
+        "type": "data",
+        "key": "saldo_staat",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "gov_debt": {
+        "type": "data",
+        "key": "schulden_staat",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "population": {
+        "type": "data",
+        "key": "bevoelkerung",
+        "decimal_places": 0,
+        "multiplier": 0.001
+    },
+    "population_projection": {
+        "type": "data",
+        "key": "voraus",
+        "decimal_places": 0,
+        "multiplier": 0.001
+    },
+    "fertility": {
+        "type": "data",
+        "key": "kinderzahl",
+        "decimal_places": 2,
+        "multiplier": 1.0
+    },
+    "life_expectancy_f": {
+        "type": "data",
+        "key": "lebenserw_f",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "life_expectancy_m": {
+        "type": "data",
+        "key": "lebenserw_m",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "employment_20_64": {
+        "type": "data",
+        "key": "erwerbstaet_20_64",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "employment_55_64": {
+        "type": "data",
+        "key": "erwerbstaet_55_64",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "unemployment_20_64": {
+        "type": "data",
+        "key": "erwerbslos_20_64",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "unemployment_15_24": {
+        "type": "data",
+        "key": "erwerbslos_15_24",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "pupils_per_teacher": {
+        "type": "data",
+        "key": "sek2",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "early_leavers": {
+        "type": "data",
+        "key": "schulab",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "tertiary_edu_f": {
+        "type": "data",
+        "key": "hochschul_f",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "tertiary_edu_m": {
+        "type": "data",
+        "key": "hochschul_m",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "public_expenditure_edu": {
+        "type": "data",
+        "key": "ausg_bildung",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "public_expenditure_rd": {
+        "type": "data",
+        "key": "ausg_forschung",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "hospital_beds": {
+        "type": "data",
+        "key": "betten",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "cancer_deaths": {
+        "type": "data",
+        "key": "krebs",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "healthy_life_years_f": {
+        "type": "data",
+        "key": "lebensjahre_f",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "healthy_life_years_m": {
+        "type": "data",
+        "key": "lebensjahre_m",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "poverty_risk": {
+        "type": "data",
+        "key": "armut",
+        "decimal_places": 1,
+        "multiplier": 0.001
+    },
+    "poverty_rate": {
+        "type": "data",
+        "key": "armutsgefahr",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "overburding": {
+        "type": "data",
+        "key": "wohnkosten",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "unexpected_expenses": {
+        "type": "data",
+        "key": "ersparnisse",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "industry": {
+        "type": "data",
+        "key": "prod_gewerbe_wertsch",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "production_index": {
+        "type": "data",
+        "key": "prod_gewerbe_index",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "retail_trade": {
+        "type": "data",
+        "key": "einzelhandel",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "building_permits": {
+        "type": "data",
+        "key": "baugenhemingungen",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "agri_gpd": {
+        "type": "data",
+        "key": "land_forst_fisch",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "organic_farming": {
+        "type": "data",
+        "key": "oeko",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "roundwood": {
+        "type": "data",
+        "key": "holz",
+        "decimal_places": 0,
+        "multiplier": 1.0
+    },
+    "fishing": {
+        "type": "data",
+        "key": "fisch",
+        "decimal_places": 0,
+        "multiplier": 1.0
+    },
+    "export": {
+        "type": "geo_special",
+        "key": "export",
+        "special_geo": "EU27_2020",
+        "special_key": "export_eu",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "import": {
+        "type": "geo_special",
+        "key": "import",
+        "special_geo": "EU27_2020",
+        "special_key": "import_eu",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "balance": {
+        "type": "geo_special",
+        "key": "bilanz",
+        "special_geo": "EU27_2020",
+        "special_key": "bilanz_eu",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "air": {
+        "type": "data",
+        "key": "fluggaeste",
+        "decimal_places": 1,
+        "multiplier": 1e-06
+    },
+    "cars": {
+        "type": "data",
+        "key": "pkw",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "trains": {
+        "type": "data",
+        "key": "zug",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "freight": {
+        "type": "data",
+        "key": "gueter",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "co2": {
+        "type": "ratio",
+        "data": [
+            {
+                "key": "co2",
+                "time": "auto"
+            },
+            {
+                "key": "pop",
+                "time": "other"
+            }
+        ],
+        "decimal_places": 1,
+        "multiplier": 1000.0
+    },
+    "greenhouse_index": {
+        "type": "ratio",
+        "data": [
+            {
+                "key": "co2",
+                "time": "auto"
+            },
+            {
+                "key": "co2",
+                "time": "1990"
+            }
+        ],
+        "decimal_places": 1,
+        "multiplier": 100.0
+    },
+    "energy_dependency": {
+        "type": "data",
+        "key": "energieab",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "renewable": {
+        "type": "data",
+        "key": "erneuerbar",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "gdp_rd": {
+        "type": "data",
+        "key": "ausgaben",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "women_researchers": {
+        "type": "data",
+        "key": "frauen",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "internet_use": {
+        "type": "data",
+        "key": "internet",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    },
+    "broadband": {
+        "type": "data",
+        "key": "breitband",
+        "decimal_places": 1,
+        "multiplier": 1.0
+    }
+}

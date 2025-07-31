@@ -1,0 +1,38 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "employment_rate": {
+        "de": "Erwerbstätigen­quote",
+        "en": "Employment rate"
+    },
+    "employment_rate_age_group_1": {
+        "de": "20- bis 64-Jährige",
+        "en": "age 20 to 64"
+    },
+    "employment_rate_age_group_2": {
+        "de": "55- bis 64-Jährige",
+        "en": "age 55 to 64"
+    },
+    "unemployment_rate": {
+        "de": "Erwerbslosen­quote",
+        "en": "Unemployment rate"
+    },
+    "unemployment_rate_age_group_1": {
+        "de": "20- bis 64-Jährige",
+        "en": "age 20 to 64"
+    },
+    "unemployment_rate_age_group_1_unit": {
+        "de": "% der Erwerbspersonen",
+        "en": "%"
+    },
+    "unemployment_rate_age_group_2": {
+        "de": "15- bis 24-Jährige",
+        "en": "age 15 to 24"
+    },
+    "unemployment_rate_age_group_2_unit": {
+        "de": "% der Erwerbspersonen",
+        "en": "%"
+    }
+}

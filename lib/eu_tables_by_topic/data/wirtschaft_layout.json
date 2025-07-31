@@ -1,0 +1,125 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },
+            {
+                "text": "$[gros_domestic_product_at_market_prices_gdp]",
+                "header": [
+                    {
+                        "text": "$[bn_eur]",
+                        "header": [
+                            {
+                                "text": "${bip_euro_time}",
+                                "header": []
+                            }
+                        ]
+                    },
+                    {
+                        "text": "$[per_inhabitant_ps]",
+                        "header": [
+                            {
+                                "text": "${bip_einw_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[gdp_growth_rate]",
+                "header": [
+                    {
+                        "text": "%",
+                        "header": [
+                            {
+                                "text": "${bip_aend_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[inflation_rate]",
+                "header": [
+                    {
+                        "text": "%",
+                        "header": [
+                            {
+                                "text": "${inflation_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[general_government_deficit/surplus]",
+                "header": [
+                    {
+                        "text": "$[percent_of_gdp]",
+                        "header": [
+                            {
+                                "text": "${saldo_staat_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[general_government_gros_debt]",
+                "header": [
+                    {
+                        "text": "$[percent_of_gdp]",
+                        "header": [
+                            {
+                                "text": "${schulden_staat_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "bip_euro",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "bip_einw",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "bip_aend",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "inflation",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "saldo_staat",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "schulden_staat",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}

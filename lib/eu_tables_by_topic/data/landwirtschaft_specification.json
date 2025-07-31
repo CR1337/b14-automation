@@ -1,0 +1,43 @@
+{
+        "land_forst_fisch": {
+            "dataset_id": "nama_10_a10",
+            "dimension_values": {
+                "nace_r2": "A",
+                "na_item": "B1G",
+                "unit": "PC_TOT"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "oeko": {
+            "dataset_id": "org_cropar",
+            "dimension_values": {
+                "agprdmet": "TOTAL",
+                "crops": "UAAXK0000",
+                "unit": "PC_UAA"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "holz": {
+            "dataset_id": "for_basic",
+            "dimension_values": {
+                "prod_wd": "RW",
+                "stk_flow": "PRD",
+                "treespec": "TOTAL",
+                "unit": "THS_M3"
+             },
+            "decimal_places": 0,
+            "multiplier": 1.0
+        },
+        "fisch": {
+            "dataset_id": "fish_ca_main",
+            "dimension_values": {
+                "fishreg": "0",
+                "species": "F00",
+                "unit": "TLW"
+             },
+            "decimal_places": 0,
+            "multiplier": 1.0
+        }
+    }
