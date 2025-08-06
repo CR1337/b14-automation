@@ -1,0 +1,94 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },
+            {
+                "text": "$[agriculture_forestry_fisheries]",
+                "header": [
+                    {
+                        "text": "$[percent_of_gros_value_aded]",
+                        "header": [
+                            {
+                                "text": "${land_forst_fisch_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[area_under_organic_farming]",
+                "header": [
+                    {
+                        "text": "$[percent_of_ua]",
+                        "header": [
+                            {
+                                "text": "${oeko_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[roundwod_production]",
+                "header": [
+                    {
+                        "text": "$[thousand_m\u00b3]",
+                        "header": [
+                            {
+                                "text": "${holz_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[fishing]",
+                "header": [
+                    {
+                        "text": "t",
+                        "header": [
+                            {
+                                "text": "${fisch_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "land_forst_fisch",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "oeko",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "holz",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "fisch",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}

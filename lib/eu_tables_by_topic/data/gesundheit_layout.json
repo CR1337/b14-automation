@@ -1,0 +1,89 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },
+            {
+                "text": "$[hospital_beds]",
+                "header": [
+                    {
+                        "text": "$[per_10_0_inh.]",
+                        "header": [
+                            {
+                                "text": "${betten_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[deaths_due_to_cancer]",
+                "header": [
+                    {
+                        "text": "$[per_10_0_inh.]",
+                        "header": [
+                            {
+                                "text": "${krebs_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[healthy_life_years]",
+                "header": [
+                    {
+                        "text": "$[age_65_female]",
+                        "header": [
+                            {
+                                "text": "${lebensjahre_f_time}",
+                                "header": []
+                            }
+                        ]
+                    },
+                    {
+                        "text": "$[age_65_male]",
+                        "header": [
+                            {
+                                "text": "${lebensjahre_m_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "betten",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "krebs",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "lebensjahre_f",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "lebensjahre_m",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}

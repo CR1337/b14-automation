@@ -1,0 +1,46 @@
+{
+    "name": {
+        "de": "EU Tabellen (nach Thema)",
+        "en": "EU Tables (by Topic)"
+    },
+    "inputs": [
+        {
+            "key": "language_selection",
+            "name": {
+                "de": "Sprache",
+                "en": "Language"
+            },
+            "type": "selection",
+            "parameters": {
+                "options": {
+                    "de": ["Deutsch", "Englisch"],
+                    "en": ["German", "English"]
+                }
+            }
+        }
+    ],
+    "outputs": [
+        {
+            "key": "status",
+            "name": {
+                "de": "Statusnachricht",
+                "en": "Status Message"
+            },
+            "type": "str"
+        },
+        {
+            "key": "file",
+            "name": {
+                "de": "Ergebnis als Datei herunterladen",
+                "en": "Download result as file"
+            },
+            "type": "binary_file",
+            "parameters": {
+                "filename": "tables.zip",
+                "mime": "application/zip",
+                "prefix_datetime": true,
+                "prefix_language": true
+            }
+        }
+    ]
+}

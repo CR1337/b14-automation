@@ -1,0 +1,77 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },
+            {
+                "text": "$[exports]",
+                "header": [
+                    {
+                        "text": "$[exports_unit]",
+                        "header": [
+                            {
+                                "text": "${exports_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[imports]",
+                "header": [
+                    {
+                        "text": "$[imports_unit]",
+                        "header": [
+                            {
+                                "text": "${imports_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[foreign_trade_balance]",
+                "header": [
+                    {
+                        "text": "$[foreign_trade_balance_unit]",
+                        "header": [
+                            {
+                                "text": "${foreign_trade_balance_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "exports",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "imports",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "foreign_trade_balance",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}
+

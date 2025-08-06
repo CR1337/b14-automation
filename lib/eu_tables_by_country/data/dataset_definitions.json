@@ -1,0 +1,443 @@
+{
+        "flaeche": {
+            "dataset_id": "reg_area3",
+            "dimension_values": {
+                "landuse": "L0008",
+                "unit": "KM2"
+            }
+        },
+        "bip_euro": {
+            "dataset_id": "nama_10_gdp",
+            "dimension_values": {
+                "na_item": "B1GQ",
+                "unit": "CP_MEUR"
+            }
+        },
+        "bip_einw": {
+            "dataset_id": "nama_10_pc",
+            "dimension_values": {
+                "na_item": "B1GQ",
+                "unit": "CP_PPS_EU27_2020_HAB"
+            }
+        },
+        "bip_aend": {
+            "dataset_id": "nama_10_gdp",
+            "dimension_values": {
+                "na_item": "B1GQ",
+                "unit": "CLV_PCH_PRE"
+            }
+        },
+        "inflation": {
+            "dataset_id": "prc_hicp_aind",
+            "dimension_values": {
+                "coicop": "CP00",
+                "unit": "RCH_A_AVG"
+            }
+        },
+        "saldo_staat": {
+            "dataset_id": "gov_10dd_edpt1",
+            "dimension_values": {
+                "na_item": "B9",
+                "sector": "S13",
+                "unit": "PC_GDP"
+            }
+        },
+        "schulden_staat": {
+            "dataset_id": "gov_10dd_edpt1",
+            "dimension_values": {
+                "na_item": "GD",
+                "sector": "S13",
+                "unit": "PC_GDP"
+            }
+        },
+        "bevoelkerung": {
+            "dataset_id": "demo_gind",
+            "dimension_values": {
+                "indic_de": "JAN"
+            }
+        },
+        "voraus": {
+            "dataset_id": "proj_19np",
+            "dimension_values": {
+                "age": "TOTAL",
+                "projection": "BSL",
+                "sex": "T",
+                "unit": "PER"
+            }
+        },
+        "kinderzahl": {
+            "dataset_id": "demo_find",
+            "dimension_values": {
+                "indic_de": "TOTFERRT"
+            }
+        },
+        "lebenserw_f": {
+            "dataset_id": "demo_mlexpec",
+            "dimension_values": {
+                "age": "Y_LT1",
+                "sex": "F",
+                "unit": "YR"
+            }
+        },
+        "lebenserw_m": {
+            "dataset_id": "demo_mlexpec",
+            "dimension_values": {
+                "age": "Y_LT1",
+                "sex": "M",
+                "unit": "YR"
+            }
+        },
+        "erwerbstaet_20_64": {
+            "dataset_id": "lfsi_emp_a",
+            "dimension_values": {
+                "age": "Y20-64",
+                "indic_em": "EMP_LFS",
+                "sex": "T",
+                "unit": "PC_POP"
+            }
+        },
+        "erwerbstaet_55_64": {
+            "dataset_id": "lfsi_emp_a",
+            "dimension_values": {
+                "age": "Y55-64",
+                "indic_em": "EMP_LFS",
+                "sex": "T",
+                "unit": "PC_POP"
+            }
+        },
+        "erwerbslos_20_64": {
+            "dataset_id": "lfsa_urgan",
+            "dimension_values": {
+                "age": "Y20-64",
+                "citizen": "TOTAL",
+                "sex": "T",
+                "unit": "PC"
+            }
+        },
+        "erwerbslos_15_24": {
+            "dataset_id": "lfsa_urgan",
+            "dimension_values": {
+                "age": "Y15-24",
+                "citizen": "TOTAL",
+                "sex": "T",
+                "unit": "PC"
+            }
+        },
+        "sek2": {
+            "dataset_id": "educ_uoe_perp04",
+            "dimension_values": {
+                "isced11": "ED3",
+                "unit": "RT"
+            }
+        },
+        "schulab": {
+            "dataset_id": "edat_lfse_14",
+            "dimension_values": {
+                "sex": "T",
+                "wstatus": "POP",
+                "unit": "PC"
+            }
+        },
+        "hochschul_f": {
+            "dataset_id": "edat_lfse_03",
+            "dimension_values": {
+                "age": "Y30-34",
+                "isced11": "ED5-8",
+                "sex": "F",
+                "unit": "PC"
+            }
+        },
+        "hochschul_m": {
+            "dataset_id": "edat_lfse_03",
+            "dimension_values": {
+                "age": "Y30-34",
+                "isced11": "ED5-8",
+                "sex": "M",
+                "unit": "PC"
+            }
+        },
+        "ausg_bildung": {
+            "dataset_id": "educ_uoe_fine06",
+            "dimension_values": {
+                "isced11": "ED02-8",
+                "unit": "PC_GDP"
+            }
+        },
+        "ausg_forschung": {
+            "dataset_id": "rd_e_gerdtot",
+            "dimension_values": {
+                "sectperf": "TOTAL",
+                "unit": "PC_GDP"
+            }
+        },
+        "betten": {
+            "dataset_id": "TPS00046",
+            "dimension_values": {
+                "hlthcare": "TOTAL",
+                "unit": "P_HTHAB"
+            }
+        },
+        "krebs": {
+            "dataset_id": "hlth_cd_asdr2",
+            "dimension_values": {
+                "age": "TOTAL",
+                "icd10": "C",
+                "sex": "T",
+                "unit": "RT"
+            }
+        },
+        "lebensjahre_f": {
+            "dataset_id": "hlth_hlye",
+            "dimension_values": {
+                "indic_he": "HLY_65",
+                "sex": "F",
+                "unit": "YR"
+            }
+        },
+        "lebensjahre_m": {
+            "dataset_id": "hlth_hlye",
+            "dimension_values": {
+                "indic_he": "HLY_65",
+                "sex": "M",
+                "unit": "YR"
+            }
+        },
+        "armut": {
+            "dataset_id": "ilc_peps01n",
+            "dimension_values": {
+                "age": "TOTAL",
+                "sex": "T",
+                "unit": "THS_PER"
+            }
+        },
+        "armutsgefahr": {
+            "dataset_id": "ilc_li02",
+            "dimension_values": {
+                "age": "TOTAL",
+                "indic_il": "LI_R_MD60",
+                "sex": "T",
+                "unit": "PC"
+            }
+        },
+        "wohnkosten": {
+            "dataset_id": "ilc_lvho07a",
+            "dimension_values": {
+                "age": "TOTAL",
+                "incgrp": "TOTAL",
+                "sex": "T",
+                "unit": "PC"
+            }
+        },
+        "ersparnisse": {
+            "dataset_id": "ilc_mdes04",
+            "dimension_values": {
+                "hhtyp": "TOTAL",
+                "incgrp": "TOTAL",
+                "unit": "PC"
+            }
+        },
+        "prod_gewerbe_wertsch": {
+            "dataset_id": "nama_10_a10",
+            "dimension_values": {
+                "nace_r2": "B-E",
+                "na_item": "B1G",
+                "unit": "PC_TOT"
+            }
+        },
+        "prod_gewerbe_index": {
+            "dataset_id": "sts_inpr_a",
+            "dimension_values": {
+                "indic_bt": "PRD",
+                "nace_r2": "C",
+                "s_adj": "CA",
+                "unit": "PCH_SM"
+            }
+        },
+        "einzelhandel": {
+            "dataset_id": "sts_trtu_a",
+            "dimension_values": {
+                "indic_bt": "VOL_SLS",
+                "nace_r2": "G47",
+                "s_adj": "CA",
+                "unit": "PCH_SM"
+            }
+        },
+        "baugenhemingungen": {
+            "dataset_id": "sts_cobp_a",
+            "dimension_values": {
+                "indic_bt": "BPRM_DW",
+                "cpa2_1": "CPA_F41001_X_410014",
+                "s_adj": "NSA",
+                "unit": "PCH_SM"
+            }
+        },
+        "land_forst_fisch": {
+            "dataset_id": "nama_10_a10",
+            "dimension_values": {
+                "nace_r2": "A",
+                "na_item": "B1G",
+                "unit": "PC_TOT"
+            }
+        },
+        "oeko": {
+            "dataset_id": "org_cropar",
+            "dimension_values": {
+                "agprdmet": "TOTAL",
+                "crops": "UAAXK0000",
+                "unit": "PC_UAA"
+            }
+        },
+        "holz": {
+            "dataset_id": "for_basic",
+            "dimension_values": {
+                "prod_wd": "RW",
+                "stk_flow": "PRD",
+                "treespec": "TOTAL",
+                "unit": "THS_M3"
+            }
+        },
+        "fisch": {
+            "dataset_id": "fish_ca_main",
+            "dimension_values": {
+                "fishreg": "0",
+                "species": "F00",
+                "unit": "TLW"
+            }
+        },
+        "import": {
+            "dataset_id": "ext_lt_intertrd",
+            "dimension_values": {
+                "indic_et": "MIO_IMP_VAL",
+                "partner": "WORLD",
+                "sitc06": "TOTAL"
+            }
+        },
+        "export": {
+            "dataset_id": "ext_lt_intertrd",
+            "dimension_values": {
+                "indic_et": "MIO_EXP_VAL",
+                "partner": "WORLD",
+                "sitc06": "TOTAL"
+            }
+        },
+        "bilanz": {
+            "dataset_id": "ext_lt_intertrd",
+            "dimension_values": {
+                "indic_et": "MIO_BAL_VAL",
+                "partner": "WORLD",
+                "sitc06": "TOTAL"
+            }
+        },
+        "import_eu": {
+            "dataset_id": "ext_lt_intertrd",
+            "dimension_values": {
+                "indic_et": "MIO_IMP_VAL",
+                "partner": "EXT_EU27_2020",
+                "sitc06": "TOTAL"
+            }
+        },
+        "export_eu": {
+            "dataset_id": "ext_lt_intertrd",
+            "dimension_values": {
+                "indic_et": "MIO_EXP_VAL",
+                "partner": "EXT_EU27_2020",
+                "sitc06": "TOTAL"
+            }
+        },
+        "bilanz_eu": {
+            "dataset_id": "ext_lt_intertrd",
+            "dimension_values": {
+                "indic_et": "MIO_BAL_VAL",
+                "partner": "EXT_EU27_2020",
+                "sitc06": "TOTAL"
+            }
+        },
+        "fluggaeste": {
+            "dataset_id": "TTR00012",
+            "dimension_values": {
+                "schedule": "TOT",
+                "tra_cov": "TOTAL",
+                "tra_meas": "PAS_CRD",
+                "unit": "PAS"
+            }
+        },
+        "pkw": {
+            "dataset_id": "tran_hv_psmod",
+            "dimension_values": {
+                "vehicle": "CAR",
+                "unit": "PC"
+            }
+        },
+        "zug": {
+            "dataset_id": "tran_hv_psmod",
+            "dimension_values": {
+                "vehicle": "TRN",
+                "unit": "PC"
+            }
+        },
+        "gueter": {
+            "dataset_id": "tran_hv_frmod",
+            "dimension_values": {
+                "tra_mode": "RAIL",
+                "unit": "PC"
+            }
+        },
+        "co2": {
+            "dataset_id": "env_air_gge",
+            "dimension_values": {
+                "airpol": "GHG",
+                "src_crf": "TOTX4_MEMO",
+                "unit": "THS_T"
+            }
+        },
+        "pop": {
+            "dataset_id": "demo_gind",
+            "dimension_values": {
+                "indic_de": "AVG"
+            }
+        },
+        "energieab": {
+            "dataset_id": "nrg_ind_id",
+            "dimension_values": {
+                "siec": "TOTAL",
+                "unit": "PC"
+            }
+        },
+        "erneuerbar": {
+            "dataset_id": "nrg_ind_ren",
+            "dimension_values": {
+                "nrg_bal": "REN",
+                "unit": "PC"
+            }
+        },
+        "ausgaben": {
+            "dataset_id": "rd_e_gerdtot",
+            "dimension_values": {
+                "sectperf": "TOTAL",
+                "unit": "PC_GDP"
+            }
+        },
+        "frauen": {
+            "dataset_id": "rd_p_femres",
+            "dimension_values": {
+                "sectperf": "TOTAL",
+                "unit": "PC_HC"
+            }
+        },
+        "internet": {
+            "dataset_id": "isoc_ci_ifp_iu",
+            "dimension_values": {
+                "indic_is": "I_IU3",
+                "ind_type": "IND_TOTAL",
+                "unit": "PC_IND"
+            }
+        },
+        "breitband": {
+            "dataset_id": "isoc_cbs",
+            "dimension_values": {
+              "inet_spd": "MBPS_GT30",
+              "terrtypo": "TOTAL",
+              "unit": "PC_HH"
+            }
+        }
+    }

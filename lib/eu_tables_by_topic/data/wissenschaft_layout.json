@@ -1,0 +1,94 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },
+            {
+                "text": "$[gros_domestic_expenditure_on_research_and_development_rand]",
+                "header": [
+                    {
+                        "text": "$[percent_of_gdp]",
+                        "header": [
+                            {
+                                "text": "${ausgaben_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[share_of_women_researchers]",
+                "header": [
+                    {
+                        "text": "$[percent_of_total_researchers]",
+                        "header": [
+                            {
+                                "text": "${frauen_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[internet_use]",
+                "header": [
+                    {
+                        "text": "$[percent_of_individuals_aged_16_to_74]",
+                        "header": [
+                            {
+                                "text": "${internet_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[broadband_aces]",
+                "header": [
+                    {
+                        "text": "$[percent_of_households]",
+                        "header": [
+                            {
+                                "text": "${breitband_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "ausgaben",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "frauen",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "internet",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "breitband",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}

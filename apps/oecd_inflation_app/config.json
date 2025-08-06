@@ -1,0 +1,48 @@
+{
+    "name": {
+        "de": "OECD Inflation",
+        "en": "OECD Inflation"
+    },
+    "inputs": [
+        {
+            "key": "date",
+            "name": {
+                "de": "Startdatum",
+                "en": "Startdate"
+            },
+            "type": "date"
+        }
+    ],
+    "outputs": [
+        {
+            "key": "status",
+            "name": {
+                "de": "Statusnachricht",
+                "en": "Status Message"
+            },
+            "type": "str"
+        },
+        {
+            "key": "table",
+            "name": {
+                "de": "Tabelle",
+                "en": "Table"
+            },
+            "type": "table"
+        },
+        {
+            "key": "file",
+            "name": {
+                "de": "Als Datei herunterladen",
+                "en": "Download as file"
+            },
+            "type": "file",
+            "parameters": {
+                "filename": "table.csv",
+                "mime": "text/csv",
+                "prefix_datetime": true,
+                "prefix_language": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+        "betten": {
+            "dataset_id": "TPS00046",
+            "dimension_values": {
+                "hlthcare": "TOTAL",
+                "unit": "P_HTHAB"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "krebs": {
+            "dataset_id": "hlth_cd_asdr2",
+            "dimension_values": {
+                "age": "TOTAL",
+                "icd10": "C",
+                "sex": "T",
+                "unit": "RT"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "lebensjahre_f": {
+            "dataset_id": "hlth_hlye",
+            "dimension_values": {
+                "indic_he": "HLY_65",
+                "sex": "F",
+                "unit": "YR"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        },
+        "lebensjahre_m": {
+            "dataset_id": "hlth_hlye",
+            "dimension_values": {
+                "indic_he": "HLY_65",
+                "sex": "M",
+                "unit": "YR"
+             },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        }
+    }

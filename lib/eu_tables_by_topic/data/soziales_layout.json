@@ -1,0 +1,94 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },
+            {
+                "text": "$[people_at_risk_of_poverty_or_social_exclusion]",
+                "header": [
+                    {
+                        "text": "$[persons_in_mn]",
+                        "header": [
+                            {
+                                "text": "${armut_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[at_risk_of_poverty_rate]",
+                "header": [
+                    {
+                        "text": "$[percent_of_population]",
+                        "header": [
+                            {
+                                "text": "${armutsgefahr_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[overburding_by_housing_cost]",
+                "header": [
+                    {
+                        "text": "$[percent_of_population]",
+                        "header": [
+                            {
+                                "text": "${wohnkosten_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[inability_to_face_unexpected_financial_expenses]",
+                "header": [
+                    {
+                        "text": "$[percent_of_households]",
+                        "header": [
+                            {
+                                "text": "${ersparnisse_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "armut",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "armutsgefahr",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "wohnkosten",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "ersparnisse",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}

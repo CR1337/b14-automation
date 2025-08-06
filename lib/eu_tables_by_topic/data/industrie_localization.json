@@ -1,0 +1,34 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "industry": {
+        "de": "Produzierendes Gewerbe",
+        "en": "Industry"
+    },
+    "percent_of_gros_value_aded": {
+        "de": "% der Wertsch\u00f6pfung",
+        "en": "% of Gross value added"
+    },
+    "production:_manufacturing": {
+        "de": "Produzierendes Gewerbe",
+        "en": "Production: Manufacturing"
+    },
+    "percent_change_on_previous_year": {
+        "de": "Anzahl Ver\u00e4nderung in % gegen\u00fcber Vorjahr",
+        "en": "% change on previous year"
+    },
+    "retail_trade:_turnover": {
+        "de": "Einzelhandels\u00adumsatz",
+        "en": "Retail trade: Turnover"
+    },
+    "real_percent_change_on_previous_year": {
+        "de": "Reale Ver\u00e4nderung in % gegen\u00fcber Vorjahr",
+        "en": "Real % change on previous year"
+    },
+    "building_permits": {
+        "de": "Bau\u00adgenehmigungen",
+        "en": "Building permits"
+    }
+}

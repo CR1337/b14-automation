@@ -1,0 +1,374 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[header_indicator]",
+                "header": []
+            },
+            {
+                "text": "$[header_unit]",
+                "header": []
+            },
+            {
+                "text": "$[header_year]",
+                "header": []
+            },
+            {
+                "text": "${header_country}",
+                "header": []
+            },
+            {
+                "text": "${header_other_country}",
+                "ifdefined": "header_other_country",
+                "header": []
+            },
+            {
+                "text": "EU-27",
+                "header": []
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "rows",
+            "rows": [
+                {
+                    "key": "capital",
+                    "front": ["$[indic_capital]", "$[unit_capital]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "currency",
+                    "front": ["$[indic_currency]", "$[unit_currency]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "land_area",
+                    "front": ["$[indic_land_area]", "$[unit_land_area]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "empty_subheader",
+                    "front": "$[subheader_economy_and_finance]",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "gdp_total",
+                    "front": ["$[indic_gdp_total]", "$[unit_gdp_total]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "gdp_per_capita",
+                    "front": ["$[indic_gdp_per_capita]", "$[unit_gdp_per_capita]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "gdp_growth",
+                    "front": ["$[indic_gdp_growth]", "$[unit_gdp_growth]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "inflation",
+                    "front": ["$[indic_inflation]", "$[unit_inflation]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "gov_deficit",
+                    "front": ["$[indic_gov_deficit]", "$[unit_gov_deficit]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "gov_debt",
+                    "front": ["$[indic_gov_debt]", "$[unit_gov_debt]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "empty_subheader",
+                    "front": "$[subheader_demographics]",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "population",
+                    "front": ["$[indic_population]", "$[unit_population]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "population_projection",
+                    "front": ["$[indic_population_projection]", "$[unit_population_projection]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "fertility",
+                    "front": ["$[indic_fertility]", "$[unit_fertility]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "life_expectancy_f",
+                    "front": ["$[indic_life_expectancy_f]", "$[unit_life_expectancy_f]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "life_expectancy_m",
+                    "front": ["$[indic_life_expectancy_m]", "$[unit_life_expectancy_m]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "empty_subheader",
+                    "front": "$[subheader_labour_market]",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "employment_20_64",
+                    "front": ["$[indic_employment_20_64]", "$[unit_employment_20_64]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "employment_55_64",
+                    "front": ["$[indic_employment_55_64]", "$[unit_employment_55_64]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "unemployment_20_64",
+                    "front": ["$[indic_unemployment_20_64]", "$[unit_unemployment_20_64]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "unemployment_15_24",
+                    "front": ["$[indic_unemployment_15_24]", "$[unit_unemployment_15_24]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "empty_subheader",
+                    "front": "$[subheader_education]",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "pupils_per_teacher",
+                    "front": ["$[indic_pupils_per_teacher]", "$[unit_pupils_per_teacher]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "early_leavers",
+                    "front": ["$[indic_early_leavers]", "$[unit_early_leavers]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "tertiary_edu_f",
+                    "front": ["$[indic_tertiary_edu_f]", "$[unit_tertiary_edu_f]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "tertiary_edu_m",
+                    "front": ["$[indic_tertiary_edu_m]", "$[unit_tertiary_edu_m]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "public_expenditure_edu",
+                    "front": ["$[indic_public_expenditure_edu]", "$[unit_public_expenditure_edu]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "public_expenditure_rd",
+                    "front": ["$[indic_public_expenditure_rd]", "$[unit_public_expenditure_rd]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "empty_subheader",
+                    "front": "$[subheader_health]",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "hospital_beds",
+                    "front": ["$[indic_hospital_beds]", "$[unit_hospital_beds]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "cancer_deaths",
+                    "front": ["$[indic_cancer_deaths]", "$[unit_cancer_deaths]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "healthy_life_years_f",
+                    "front": ["$[indic_healthy_life_years_f]", "$[unit_healthy_life_years_f]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "healthy_life_years_m",
+                    "front": ["$[indic_healthy_life_years_m]", "$[unit_healthy_life_years_m]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "empty_subheader",
+                    "front": "$[subheader_social_issues]",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "poverty_risk",
+                    "front": ["$[indic_poverty_risk]", "$[unit_poverty_risk]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "poverty_rate",
+                    "front": ["$[indic_poverty_rate]", "$[unit_poverty_rate]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "overburding",
+                    "front": ["$[indic_overburding]", "$[unit_overburding]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "unexpected_expenses",
+                    "front": ["$[indic_unexpected_expenses]", "$[unit_unexpected_expenses]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "empty_subheader",
+                    "front": "$[subheader_industry]",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "industry",
+                    "front": ["$[indic_industry]", "$[unit_industry]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "production_index",
+                    "front": ["$[indic_production_index]", "$[unit_production_index]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "retail_trade",
+                    "front": ["$[indic_retail_trade]", "$[unit_retail_trade]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "building_permits",
+                    "front": ["$[indic_building_permits]", "$[unit_building_permits]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "empty_subheader",
+                    "front": "$[subheader_agriculture]",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "agri_gpd",
+                    "front": ["$[indic_agri_gdp]", "$[unit_agri_gdp]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "organic_farming",
+                    "front": ["$[indic_organic_farming]", "$[unit_organic_farming]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "roundwood",
+                    "front": ["$[indic_roundwood]", "$[unit_roundwood]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "fishing",
+                    "front": ["$[indic_fishing]", "$[unit_fishing]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "empty_subheader",
+                    "front": "$[subheader_foreign_trade]",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "export",
+                    "front": ["$[indic_export]", "$[unit_export]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "import",
+                    "front": ["$[indic_import]", "$[unit_import]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "balance",
+                    "front": ["$[indic_balance]", "$[unit_balance]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "empty_subheader",
+                    "front": "$[subheader_transport]",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "air",
+                    "front": ["$[indic_air]", "$[unit_air]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "cars",
+                    "front": ["$[indic_cars]", "$[unit_cars]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "trains",
+                    "front": ["$[indic_trains]", "$[unit_trains]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "freight",
+                    "front": ["$[indic_freight]", "$[unit_freight]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "empty_subheader",
+                    "front": "$[subheader_environment]",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "co2",
+                    "front": ["$[indic_co2]", "$[unit_co2]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "greenhouse_index",
+                    "front": ["$[indic_greenhouse_index]", "$[unit_greenhouse_index]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "energy_dependency",
+                    "front": ["$[indic_energy_dependency]", "$[unit_energy_dependecy]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "renewable",
+                    "front": ["$[indic_renewable]", "$[unit_renewable]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "empty_subheader",
+                    "front": "$[subheader_science]",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "gdp_rd",
+                    "front": ["$[indic_gdp_rd]", "$[unit_gdp_rd]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "women_researchers",
+                    "front": ["$[indic_women_researchers]", "$[unit_women_researchers]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "internet_use",
+                    "front": ["$[indic_internet_use]", "$[unit_internet_use]"],
+                    "fixed_values": {}
+                },
+                {
+                    "key": "broadband",
+                    "front": ["$[indic_broadband]", "$[unit_broadband]"],
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}

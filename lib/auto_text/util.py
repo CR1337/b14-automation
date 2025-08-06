@@ -1,0 +1,106 @@
+from typing import Dict, List
+
+THOUSANDS_PER_MIILLION: int = 1_000
+COUNTRY_NAMES_CASED: Dict[str, Dict[str, str]] = {
+    "EU27_2020": {"N": "die EU", "G": "der EU", "D": "der EU", "A": "die EU"},
+    "EA20": {
+        "N": "der Euroraum",
+        "G": "des Euroraums",
+        "D": "dem Euroraum",
+        "A": "den Euroraum",
+    },
+    "BE": {"N": "Belgien", "G": "Belgiens", "D": "Belgien", "A": "Belgien"},
+    "BG": {"N": "Bulgarien", "G": "Bulgariens", "D": "Bulgarien", "A": "Bulgarien"},
+    "CZ": {"N": "Tschechien", "G": "Tschechiens", "D": "Tschechien", "A": "Tschechien"},
+    "DK": {"N": "Dänemark", "G": "Dänemarks", "D": "Dänemark", "A": "Dänemark"},
+    "DE": {
+        "N": "Deutschland",
+        "G": "Deutschlands",
+        "D": "Deutschland",
+        "A": "Deutschland",
+    },
+    "EE": {"N": "Estland", "G": "Estlands", "D": "Estland", "A": "Estland"},
+    "IE": {"N": "Irland", "G": "Irlands", "D": "Irland", "A": "Irland"},
+    "EL": {
+        "N": "Griechenland",
+        "G": "Griechenlands",
+        "D": "Griechenland",
+        "A": "Griechenland",
+    },
+    "ES": {"N": "Spanien", "G": "Spaniens", "D": "Spanien", "A": "Spanien"},
+    "FR": {"N": "Frankreich", "G": "Frankreichs", "D": "Frankreich", "A": "Frankreich"},
+    "HR": {"N": "Kroatien", "G": "Kroatiens", "D": "Kroatien", "A": "Kroatien"},
+    "IT": {"N": "Italien", "G": "Italiens", "D": "Italien", "A": "Italien"},
+    "CY": {"N": "Zypern", "G": "Zyperns", "D": "Zypern", "A": "Zypern"},
+    "LV": {"N": "Lettland", "G": "Lettlands", "D": "Lettland", "A": "Lettland"},
+    "LT": {"N": "Litauen", "G": "Litauens", "D": "Litauen", "A": "Litauen"},
+    "LU": {"N": "Luxemburg", "G": "Luxemburgs", "D": "Luxemburg", "A": "Luxemburg"},
+    "HU": {"N": "Ungarn", "G": "Ungarns", "D": "Ungarn", "A": "Ungarn"},
+    "MT": {"N": "Malta", "G": "Maltas", "D": "Malta", "A": "Malta"},
+    "NL": {
+        "N": "die Niederlande",
+        "G": "der Niederlande",
+        "D": "den Niederlanden",
+        "A": "die Niederlande",
+    },
+    "AT": {"N": "Österreich", "G": "Österreichs", "D": "Österreich", "A": "Österreich"},
+    "PL": {"N": "Polen", "G": "Polens", "D": "Polen", "A": "Polen"},
+    "PT": {"N": "Portugal", "G": "Portugals", "D": "Portugal", "A": "Portugal"},
+    "RO": {"N": "Rumänien", "G": "Rumäniens", "D": "Rumänien", "A": "Rumänien"},
+    "SI": {"N": "Slowenien", "G": "Sloweniens", "D": "Slowenien", "A": "Slowenien"},
+    "SK": {
+        "N": "die Slowakei",
+        "G": "der Slowakei",
+        "D": "der Slowakei",
+        "A": "die Slowakei",
+    },
+    "SE": {"N": "Schweden", "G": "Schwedens", "D": "Schweden", "A": "Schweden"},
+    "FI": {"N": "Finnland", "G": "Finnlands", "D": "Finnland", "A": "Finnland"},
+}
+MONTHS: List[str] = [
+    "",
+    "Januar",
+    "Februar",
+    "März",
+    "April",
+    "Mai",
+    "Juni",
+    "Juli",
+    "August",
+    "September",
+    "Oktober",
+    "November",
+    "Dezember",
+]
+NBSP: str = chr(160)
+
+
+def enumerate_terms(terms: List[str], max_terms: int = -1) -> str:
+    if max_terms >= 0:
+        terms = terms[:max_terms]
+    match len(terms):
+        case 0:
+            return ""
+
+        case 1:
+            return terms[0]
+
+        case 2:
+            return f"{terms[0]} und {terms[1]}"
+
+        case 3:
+            return f"{terms[0]} und {terms[1]} sowie {terms[2]}"
+
+        case 4:
+            return f"{terms[0]} und {terms[1]} sowie {terms[2]} und {terms[3]}"
+
+        case _:
+            return f"{', '.join(t for t in terms[:-1])} und {terms[-1]}"
+
+
+def format_value(value: float, decimal_places: int = 1) -> str:
+    return f"{value:.{decimal_places}f}".replace(".", ",")
+
+
+def from_str(string: str) -> float:
+    return float(string.replace(",", "."))

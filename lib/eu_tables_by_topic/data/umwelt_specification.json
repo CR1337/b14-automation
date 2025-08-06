@@ -1,0 +1,66 @@
+{
+        "air": {
+            "is_ratio": true,
+            "specifications": [
+                {
+                    "dataset_id": "env_air_gge",
+                    "dimension_values": {
+                        "airpol": "GHG",
+                        "src_crf": "TOTX4_MEMO",
+                        "unit": "THS_T"
+                    }
+                },
+                {
+                    "dataset_id": "demo_gind",
+                    "dimension_values": {
+                        "indic_de": "AVG"
+                    },
+                    "time": "same"
+                }
+            ],
+            "decimal_places": 1,
+            "multiplier": 1000.0
+        },
+        "index": {
+            "is_ratio": true,
+            "specifications": [
+                {
+                    "dataset_id": "env_air_gge",
+                    "dimension_values": {
+                        "airpol": "GHG",
+                        "src_crf": "TOTX4_MEMO",
+                        "unit": "THS_T"
+                    }
+                },
+                {
+                    "dataset_id": "env_air_gge",
+                    "dimension_values": {
+                        "airpol": "GHG",
+                        "src_crf": "TOTX4_MEMO",
+                        "unit": "THS_T"
+                    },
+                    "time": "1990"
+                }
+            ],
+            "decimal_places": 0,
+            "multiplier": 100.0
+        },
+        "energy": {
+            "dataset_id": "nrg_ind_id",
+            "dimension_values": {
+                "siec": "TOTAL",
+                "unit": "PC"
+            },
+            "decimal_places": 0,
+            "multiplier": 1.0
+        },
+        "renew": {
+            "dataset_id": "nrg_ind_ren",
+            "dimension_values": {
+                "nrg_bal": "REN",
+                "unit": "PC"
+            },
+            "decimal_places": 1,
+            "multiplier": 1.0
+        }
+    }

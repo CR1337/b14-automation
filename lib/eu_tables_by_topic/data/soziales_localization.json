@@ -1,0 +1,34 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "people_at_risk_of_poverty_or_social_exclusion": {
+        "de": "Armut und soziale Ausgrenzung",
+        "en": "People at risk of poverty or social exclusion"
+    },
+    "persons_in_mn": {
+        "de": "Betroffene in Mill.",
+        "en": "Persons in mn"
+    },
+    "at_risk_of_poverty_rate": {
+        "de": "Armutsgef\u00e4hrdete Bev\u00f6lkerung",
+        "en": "At-risk-of-poverty rate"
+    },
+    "percent_of_population": {
+        "de": "% der Bev\u00f6lkerung",
+        "en": "% of population"
+    },
+    "overburding_by_housing_cost": {
+        "de": "Durch Wohnkosten \u00fcberbelastet",
+        "en": "Overburding by housing cost"
+    },
+    "inability_to_face_unexpected_financial_expenses": {
+        "de": "Keine gr\u00f6\u00dferen Ersparnisse",
+        "en": "Inability to face unexpected financial expenses"
+    },
+    "percent_of_households": {
+        "de": "% der Haushalte",
+        "en": "% of households"
+    }
+}

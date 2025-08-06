@@ -1,0 +1,502 @@
+{
+    "header_indicator": {
+        "de": "Indikator",
+        "en": "Indicator"
+    },
+    "header_unit": {
+        "de": "Einheit",
+        "en": "Unit"
+    },
+    "header_year": {
+        "de": "Jahr",
+        "en": "Year"
+    },
+    "subheader_economy_and_finance": {
+        "de": "Wirtschaft und Finanzen",
+        "en": "Economy and finance"
+    },
+    "subheader_demographics": {
+        "de": "Bevölkerung",
+        "en": "Demography"
+    },
+    "subheader_labour_market": {
+        "de": "Arbeitsmarkt",
+        "en": "Labour market"
+    },
+    "subheader_education": {
+        "de": "Bildung",
+        "en": "Education"
+    },
+    "subheader_health": {
+        "de": "Gesundheit",
+        "en": "Health"
+    },
+    "subheader_social_issues": {
+        "de": "Soziales und Lebensbedingungen",
+        "en": "Social issues, living conditions"
+    },
+    "subheader_industry": {
+        "de": "Industrie, Handel und Dienstleistungen",
+        "en": "Industry, trade and service"
+    },
+    "subheader_agriculture": {
+        "de": "Land- und Forstwirtschaft, Fischerei",
+        "en": "Agriculture, forestry and fisheries"
+    },
+    "subheader_foreign_trade": {
+        "de": "Außenhandel",
+        "en": "Foreign trade"
+    },
+    "subheader_transport": {
+        "de": "Verkehr",
+        "en": "Transport"
+    },
+    "subheader_environment": {
+        "de": "Umwelt und Energie",
+        "en": "Environment and energy"
+    },
+    "subheader_science": {
+        "de": "Wissenschaft, Technologie und digitale Gesellschaft",
+        "en": "Science and technology"
+    },
+    "indic_capital": {
+        "de": "Hauptstadt",
+        "en": "Capital"
+    },
+    "unit_capital": {
+        "de": "- -- Nichts vorhanden",
+        "en": "- -- No figures or magnitude zero"
+    },
+    "indic_currency": {
+        "de": "Währung",
+        "en": "Currency"
+    },
+    "unit_currency": {
+        "de": "- -- Nichts vorhanden",
+        "en": "- -- No figures or magnitude zero"
+    },
+    "indic_land_area": {
+        "de": "Landfläche",
+        "en": "Land area"
+    },
+    "unit_land_area": {
+        "de": "km²",
+        "en": "km²"
+    },
+    "indic_gdp_total": {
+        "de": "Nominales Brutto­inlands­produkt (BIP)",
+        "en": "Gross domestic product (GDP) at market prices"
+    },
+    "unit_gdp_total": {
+        "de": "Mrd. Euro",
+        "en": "bn euros"
+    },
+    "indic_gdp_per_capita": {
+        "de": "Nominales Brutto­inlands­produkt (BIP)",
+        "en": "Gross domestic product (GDP) at market prices"
+    },
+    "unit_gdp_per_capita": {
+        "de": "je Einwohner/-in KKS",
+        "en": "per inhabitant PPS"
+    },
+    "indic_gdp_growth": {
+        "de": "Reale Veränderung des BIP zum Vorjahr",
+        "en": "GDP growth rate"
+    },
+    "unit_gdp_growth": {
+        "de": "%",
+        "en": "%"
+    },
+    "indic_inflation": {
+        "de": "Inflationsrate",
+        "en": "Inflation rate"
+    },
+    "unit_inflation": {
+        "de": "%",
+        "en": "%"
+    },
+    "indic_gov_deficit": {
+        "de": "Finanzierungs­saldo des Staates",
+        "en": "General government deficit/surplus"
+    },
+    "unit_gov_deficit": {
+        "de": "% des BIP",
+        "en": "% of GDP"
+    },
+    "indic_gov_debt": {
+        "de": "Brutto­schulden­stand des Staates",
+        "en": "General government gross debt"
+    },
+    "unit_gov_debt": {
+        "de": "% des BIP",
+        "en": "% of GDP"
+    },
+    "indic_population": {
+        "de": "Bevölkerung",
+        "en": "Population"
+    },
+    "unit_population": {
+        "de": "1\u00a0000",
+        "en": "1,000"
+    },
+    "indic_population_projection": {
+        "de": "Bevölkerungsvorausberechnung",
+        "en": "Population projections"
+    },
+    "unit_population_projection": {
+        "de": "1\u00a0000",
+        "en": "1,000"
+    },
+    "indic_fertility": {
+        "de": "Zusammengefasste Geburtenziffer",
+        "en": "Total fertility rate"
+    },
+    "unit_fertility": {
+        "de": "Kinder je Frau",
+        "en": "children per woman"
+    },
+    "indic_life_expectancy_f": {
+        "de": "Lebens­erwartung bei Geburt (Frauen)",
+        "en": "Life expectancy at birth (female)"
+    },
+    "unit_life_expectancy_f": {
+        "de": "Jahre",
+        "en": "years"
+    },
+    "indic_life_expectancy_m": {
+        "de": "Lebens­erwartung bei Geburt (Männer)",
+        "en": "Life expectancy at birth (male)"
+    },
+    "unit_life_expectancy_m": {
+        "de": "Jahre",
+        "en": "years"
+    },
+    "indic_employment_20_64": {
+        "de": "Erwerbstätigen­quote (20- bis 64-Jährige)",
+        "en": "Employment rate (age 20 to 64)"
+    },
+    "unit_employment_20_64": {
+        "de": "%",
+        "en": "%"
+    },
+    "indic_employment_55_64": {
+        "de": "Erwerbstätigen­quote (55- bis 64-Jährige)",
+        "en": "Employment rate (age 55 to 64)"
+    },
+    "unit_employment_55_64": {
+        "de": "%",
+        "en": "%"
+    },
+    "indic_unemployment_20_64": {
+        "de": "Erwerbslosen­quote (20- bis 64-Jährige)",
+        "en": "Unemployment rate (age 20 to 64)"
+    },
+    "unit_unemployment_20_64": {
+        "de": "% der Erwerbspersonen",
+        "en": "% of active population"
+    },
+    "indic_unemployment_15_24": {
+        "de": "Erwerbslosen­quote (15- bis 24-Jährige)",
+        "en": "Unemployment rate (age 15 to 24)"
+    },
+    "unit_unemployment_15_24": {
+        "de": "% der Erwerbspersonen",
+        "en": "% of active population"
+    },
+    "indic_pupils_per_teacher": {
+        "de": "Schüler je Lehrkraft im Sekundar­bereich II",
+        "en": "Pupils per teacher (secondary level)"
+    },
+    "unit_pupils_per_teacher": {
+        "de": "Anzahl",
+        "en": "number"
+    },
+    "indic_early_leavers": {
+        "de": "Frühe Schul­abgänger/-innen (18- bis 24-Jährige)",
+        "en": "Early leavers from education (aged 18-24)"
+    },
+    "unit_early_leavers": {
+        "de": "%",
+        "en": "%"
+    },
+    "indic_tertiary_edu_f": {
+        "de": "30- bis 34-jährige Frauen mit Hochschul­abschluss",
+        "en": "Tertiary educational attainment, aged 30-34 (female)"
+    },
+    "unit_tertiary_edu_f": {
+        "de": "%",
+        "en": "%"
+    },
+    "indic_tertiary_edu_m": {
+        "de": "30- bis 34-jährige Männer mit Hochschul­abschluss",
+        "en": "Tertiary educational attainment, aged 30-34 (male)"
+    },
+    "unit_tertiary_edu_m": {
+        "de": "%",
+        "en": "%"
+    },
+    "indic_public_expenditure_edu": {
+        "de": "Öffent­liche Gesamt­ausgaben für Bildung",
+        "en": "Public expenditure for education"
+    },
+    "unit_public_expenditure_edu": {
+        "de": "% des BIP",
+        "en": "% of GDP"
+    },
+    "indic_public_expenditure_rd": {
+        "de": "Öffent­liche Gesamt­ausgaben für Forschung und Entwicklung (FuE)",
+        "en": "Public expenditure for R&D"
+    },
+    "unit_public_expenditure_rd": {
+        "de": "% des BIP",
+        "en": "% of GDP"
+    },
+    "indic_hospital_beds": {
+        "de": "Krankenhaus­betten",
+        "en": "Hospital beds"
+    },
+    "unit_hospital_beds": {
+        "de": "je 100\u00a0000 Einwohner/-innen",
+        "en": "per 100,000 inhabitants"
+    },
+    "indic_cancer_deaths": {
+        "de": "Todesfälle durch Krebs",
+        "en": "Deaths due to cancer"
+    },
+    "unit_cancer_deaths": {
+        "de": "je 100\u00a0000 Einwohner/-innen",
+        "en": "per 100,000 inhabitants"
+    },
+    "indic_healthy_life_years_f": {
+        "de": "Gesunde Lebensjahre 65-jährige Frauen",
+        "en": "Healthy life years, age 65 (female)"
+    },
+    "unit_healthy_life_years_f": {
+        "de": "Erwartete Jahre",
+        "en": "expected years"
+    },
+    "indic_healthy_life_years_m": {
+        "de": "Gesunde Lebensjahre 65-jährige Männer",
+        "en": "Healthy life years, age 65 (male)"
+    },
+    "unit_healthy_life_years_m": {
+        "de": "Erwartete Jahre",
+        "en": "expected years"
+    },
+    "indic_poverty_risk": {
+        "de": "Armut und soziale Ausgrenzung",
+        "en": "People at risk of poverty or social exclusion"
+    },
+    "unit_poverty_risk": {
+        "de": "Betroffene in Mill.",
+        "en": "persons in mn"
+    },
+    "indic_poverty_rate": {
+        "de": "Armutsgefährdete Bevölkerung",
+        "en": "At-risk-of-poverty rate"
+    },
+    "unit_poverty_rate": {
+        "de": "% der Bevölkerung",
+        "en": "% of population"
+    },
+    "indic_overburding": {
+        "de": "Durch Wohnkosten überbelastet",
+        "en": "Overburding by housing cost"
+    },
+    "unit_overburding": {
+        "de": "% der Bevölkerung",
+        "en": "% of population"
+    },
+    "indic_unexpected_expenses": {
+        "de": "Keine größeren Ersparnisse",
+        "en": "Inability to face unexpected financial expenses"
+    },
+    "unit_unexpected_expenses": {
+        "de": "% der Haushalte",
+        "en": "% of households"
+    },
+    "indic_industry": {
+        "de": "Produzierendes Gewerbe",
+        "en": "Industry"
+    },
+    "unit_industry": {
+        "de": "% der Bruttowertschöpfung",
+        "en": "% of GDP"
+    },
+    "indic_production_index": {
+        "de": "Verarbeitendes Gewerbe, Produktions­index",
+        "en": "Manufacturing: production index"
+    },
+    "unit_production_index": {
+        "de": "% Veränderung zum Vorjahr",
+        "en": "% change on previous year"
+    },
+    "indic_retail_trade": {
+        "de": "Einzelhandels­umsatz",
+        "en": "Retail trade: turnover (deflated)"
+    },
+    "unit_retail_trade": {
+        "de": "% Veränderung zum Vorjahr",
+        "en": "% change on previous year"
+    },
+    "indic_building_permits": {
+        "de": "Bau­genehmigungen",
+        "en": "Building permits"
+    },
+    "unit_building_permits": {
+        "de": "% Veränderung zum Vorjahr",
+        "en": "% change on previous year"
+    },
+    "indic_agri_gdp": {
+        "de": "Land- und Forstwirtschaft, Fischerei",
+        "en": "Agriculture, forestry and fisheries"
+    },
+    "unit_agri_gdp": {
+        "de": "% der Bruttowertschöpfung",
+        "en": "% of GDP"
+    },
+    "indic_organic_farming": {
+        "de": "Ökologischer Landbau",
+        "en": "Area under organic farming"
+    },
+    "unit_organic_farming": {
+        "de": "% der LF",
+        "en": "% of UAA"
+    },
+    "indic_roundwood": {
+        "de": "Holzeinschlag",
+        "en": "Roundwood production"
+    },
+    "unit_roundwood": {
+        "de": "1\u00a0000 m³",
+        "en": "1,000 m³"
+    },
+    "indic_fishing": {
+        "de": "Fischfang",
+        "en": "Fishing"
+    },
+    "unit_fishing": {
+        "de": "Tonnen",
+        "en": "tonnes"
+    },
+    "indic_import": {
+        "de": "Wareneinfuhr",
+        "en": "Imports"
+    },
+    "unit_import": {
+        "de": "Mill. Euro",
+        "en": "mn euros"
+    },
+    "indic_export": {
+        "de": "Warenausfuhr",
+        "en": "Exports"
+    },
+    "unit_export": {
+        "de": "Mill. Euro",
+        "en": "mn euros"
+    },
+    "indic_balance": {
+        "de": "Außenhandelsbilanz",
+        "en": "Foreign trade balance"
+    },
+    "unit_balance": {
+        "de": "Mill. Euro",
+        "en": "mn euros"
+    },
+    "indic_air": {
+        "de": "Fluggäste",
+        "en": "Air transport passengers"
+    },
+    "unit_air": {
+        "de": "Mill. Passagiere",
+        "en": "mn"
+    },
+    "indic_cars": {
+        "de": "Personenbeförderung mit Pkw",
+        "en": "Passenger transport"
+    },
+    "unit_cars": {
+        "de": "%",
+        "en": "% passenger cars"
+    },
+    "indic_trains": {
+        "de": "Personenbeförderung mit Eisenbahn",
+        "en": "Passenger transport"
+    },
+    "unit_trains": {
+        "de": "%",
+        "en": "% trains"
+    },
+    "indic_freight": {
+        "de": "Güterbeförderung mit Eisenbahn",
+        "en": "Freight transport"
+    },
+    "unit_freight": {
+        "de": "%",
+        "en": "% railways"
+    },
+    "indic_co2": {
+        "de": "Treibhaus­gas­emissionen",
+        "en": "Greenhouse gas emissions"
+    },
+    "unit_co2": {
+        "de": "t CO2-Äquivalent je EW",
+        "en": "tonnes of CO2 equivalent per capita"
+    },
+    "indic_greenhouse_index": {
+        "de": "Treibhaus­gas­emissionen",
+        "en": "Greenhouse gas emissions"
+    },
+    "unit_greenhouse_index": {
+        "de": "Index (1990=100)",
+        "en": "Index (1990=100)"
+    },
+    "indic_energy_dependency": {
+        "de": "Energie­abhängigkeit",
+        "en": "Energy dependency rate"
+    },
+    "unit_energy_dependecy": {
+        "de": "% des Energiebedarfs",
+        "en": "% in gross domestic consumption"
+    },
+    "indic_renewable": {
+        "de": "Erneuerbare Energien",
+        "en": "Renewable energy"
+    },
+    "unit_renewable": {
+        "de": "% des Bruttoend­energie­verbrauchs",
+        "en": "% share in gross final energy consumption"
+    },
+    "indic_gdp_rd": {
+        "de": "Ausgaben Forschung und Entwicklung (FuE)",
+        "en": "Gross domestic expenditure on R&D"
+    },
+    "unit_gdp_rd": {
+        "de": "% des BIP",
+        "en": "% of GDP"
+    },
+    "indic_women_researchers": {
+        "de": "Frauenanteil im Forschungssektor",
+        "en": "Share of women researchers"
+    },
+    "unit_women_researchers": {
+        "de": "%",
+        "en": "% of total researchers"
+    },
+    "indic_internet_use": {
+        "de": "Internetnutzung",
+        "en": "Internet use"
+    },
+    "unit_internet_use": {
+        "de": "% der 16- bis 74-Jährigen",
+        "en": "% of persons (aged 16 to 74)"
+    },
+    "indic_broadband": {
+        "de": "Breitbandzugang",
+        "en": "Broadband access"
+    },
+    "unit_broadband": {
+        "de": "% der Haushalte",
+        "en": "% of households"
+    }
+}

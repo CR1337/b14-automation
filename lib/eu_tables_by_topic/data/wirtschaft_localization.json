@@ -1,0 +1,38 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "gros_domestic_product_at_market_prices_gdp": {
+        "de": "Nominales Brutto\u00adinlands\u00adprodukt (BIP)",
+        "en": "Gross domestic product at market prices (GDP)"
+    },
+    "bn_eur": {
+        "de": "Mrd. Euro",
+        "en": "bn EUR"
+    },
+    "per_inhabitant_ps": {
+        "de": "je Einwohner/ -in (KKS)",
+        "en": "per inhabitant (PPS)"
+    },
+    "gdp_growth_rate": {
+        "de": "Reale Ver\u00e4nderung des BIP zum Vorjahr",
+        "en": "GDP growth rate"
+    },
+    "inflation_rate": {
+        "de": "Inflationsrate",
+        "en": "Inflation rate"
+    },
+    "general_government_deficit/surplus": {
+        "de": "Finanzierungs\u00adsaldo des Staates",
+        "en": "General government deficit/surplus"
+    },
+    "percent_of_gdp": {
+        "de": "% des BIP",
+        "en": "% of GDP"
+    },
+    "general_government_gros_debt": {
+        "de": "Brutto\u00adschulden\u00adstand des Staates",
+        "en": "General government gross debt"
+    }
+}

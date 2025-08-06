@@ -1,0 +1,62 @@
+{
+    "name": {
+        "de": "Textgenerierung",
+        "en": "Text Generation"
+    },
+    "inputs": [
+        {
+            "key": "topic",
+            "name": {
+                "de": "Thema",
+                "en": "Topic"
+            },
+            "type": "selection",
+            "parameters": {
+                "options": {
+                    "de": ["Erwerbslosenquote"],
+                    "en": ["Unemployment Rate"]
+                }
+            }
+        },
+        {
+            "key": "date",
+            "name": {
+                "de": "Datum",
+                "en": "Date"
+            },
+            "type": "date"
+        }
+    ],
+    "outputs": [
+        {
+            "key": "status",
+            "name": {
+                "de": "Statusnachricht",
+                "en": "Status Message"
+            },
+            "type": "str"
+        },
+        {
+            "key": "text",
+            "name": {
+                "de": "Text",
+                "en": "Text"
+            },
+            "type": "str",
+            "parameters": {
+                "multiline": true
+            }
+        },
+        {
+            "key": "file",
+            "name": {
+                "de": "Als Datei herunterladen",
+                "en": "Download as file"
+            },
+            "type": "file",
+            "parameters": {
+                "filename": "text.txt"
+            }
+        }
+    ]
+}

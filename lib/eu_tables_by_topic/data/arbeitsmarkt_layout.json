@@ -1,0 +1,104 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },      
+         {
+                "text": "$[employment_rate]",
+                "header": [
+                    {
+                        "text": "$[employment_rate_age_group_1]",
+                        "header": [
+                            {
+                                "text": "%",
+                                "header": [
+                                    {
+                                    "text": "${employment_rate_age_group_1_time}",
+                                    "header": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "text": "$[employment_rate_age_group_2]",
+                        "header": [
+                            {
+                                "text": "%",
+                                "header": [
+                                    {
+                                    "text": "${employment_rate_age_group_2_time}",
+                                    "header": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[unemployment_rate]",
+                "header": [
+                    {
+                        "text": "$[unemployment_rate_age_group_1]",
+                        "header": [
+                            {
+                                "text": "$[unemployment_rate_age_group_1_unit]",
+                                "header": [
+                                    {
+                                    "text": "${unemployment_rate_age_group_1_time}",
+                                    "header": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "text": "$[unemployment_rate_age_group_2]",
+                        "header": [
+                            {
+                                "text": "$[unemployment_rate_age_group_2_unit]",
+                                "header": [
+                                    {
+                                    "text": "${unemployment_rate_age_group_2_time}",
+                                    "header": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "employment_rate_age_group_1",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "employment_rate_age_group_2",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "unemployment_rate_age_group_1",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "unemployment_rate_age_group_2",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}

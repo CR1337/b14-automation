@@ -1,0 +1,34 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "emissions": {
+        "de": "Treibhaus­gas­emissionen",
+        "en": "Greenhouse gas emissions"
+    },
+    "air_unit": {
+        "de": "Tonnen CO2-Äquivalent pro Kopf",
+        "en": "tonnes of CO2 equivalent per capita"
+    },
+    "index_unit": {
+        "de": "Index (1990=100)",
+        "en": "index (1990=100)"
+    },
+    "energy_dep": {
+        "de": "Energie­abhängigkeit",
+        "en": "Energy dependency rate"
+    },
+    "energy_unit": {
+        "de": "% des Energiebedarfs",
+        "en": "% in gross domestic consumption"
+    },
+    "renewable": {
+        "de": "Erneuerbare Energien",
+        "en": "Renewable energy"
+    },
+    "renew_unit": {
+        "de": "% des Bruttoend­energie­verbrauchs",
+        "en": "% share in gross final energy consumption"
+    }
+}

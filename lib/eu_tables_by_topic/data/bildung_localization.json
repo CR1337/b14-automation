@@ -1,0 +1,46 @@
+{
+    "country": {
+        "de": "Staat",
+        "en": "Country"
+    },
+    "pupils_per_teacher_secondary_level": {
+        "de": "Sch\u00fcler je Lehrkraft im Sekundar\u00adbereich II",
+        "en": "Pupils per teacher - secondary level"
+    },
+    "number": {
+        "de": "Anzahl",
+        "en": "number"
+    },
+    "early_leavers_from_education_aged_18_24": {
+        "de": "Fr\u00fche Schul\u00adabg\u00e4nger/-innen (18- bis 24-J\u00e4hrige)",
+        "en": "Early leavers from education (aged 18-24)"
+    },
+    "tertiary_educational_atainment_age_group_30_34": {
+        "de": "Anteil der 30- bis 34-J\u00e4hrigen mit Hochschul\u00adabschluss",
+        "en": "Tertiary educational attainment, age group 30-34"
+    },
+    "female": {
+        "de": "Frauen",
+        "en": "female"
+    },
+    "male": {
+        "de": "M\u00e4nner",
+        "en": "male"
+    },
+    "public_expenditure": {
+        "de": "\u00d6ffent\u00adliche Gesamt\u00adausgaben",
+        "en": "Public expenditure"
+    },
+    "education": {
+        "de": "Bildung",
+        "en": "Education"
+    },
+    "percent_of_gdp": {
+        "de": "% des Brutto\u00adinlands\u00adprodukts",
+        "en": "% of GDP"
+    },
+    "research_and_development_rand": {
+        "de": "Forschung und Entwicklung (FuE)",
+        "en": "Research and development (R&D)"
+    }
+}

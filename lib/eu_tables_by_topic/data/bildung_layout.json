@@ -1,0 +1,140 @@
+{
+    "header": {
+        "text": null,
+        "header": [
+            {
+                "text": "$[country]",
+                "header": []
+            },
+            {
+                "text": "$[pupils_per_teacher_secondary_level]",
+                "header": [
+                    {
+                        "text": "$[number]",
+                        "header": [
+                            {
+                                "text": "${sek2_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[early_leavers_from_education_aged_18_24]",
+                "header": [
+                    {
+                        "text": "%",
+                        "header": [
+                            {
+                                "text": "${schulab_time}",
+                                "header": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[tertiary_educational_atainment_age_group_30_34]",
+                "header": [
+                    {
+                        "text": "$[female]",
+                        "header": [
+                            {
+                                "text": "%",
+                                "header": [
+                                    {
+                                        "text": "${hochschul_f_time}",
+                                        "header": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "text": "$[male]",
+                        "header": [
+                            {
+                                "text": "%",
+                                "header": [
+                                    {
+                                        "text": "${hochschul_m_time}",
+                                        "header": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "$[public_expenditure]",
+                "header": [
+                    {
+                        "text": "$[education]",
+                        "header": [
+                            {
+                                "text": "$[percent_of_gdp]",
+                                "header": [
+                                    {
+                                        "text": "${ausg_bildung_time}",
+                                        "header": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "text": "$[research_and_development_rand]",
+                        "header": [
+                            {
+                                "text": "$[percent_of_gdp]",
+                                "header": [
+                                    {
+                                        "text": "${ausg_forschung_time}",
+                                        "header": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "columns",
+            "columns": [
+                {
+                    "key": "geo",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "sek2",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "schulab",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "hochschul_f",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "hochschul_m",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "ausg_bildung",
+                    "fixed_values": {}
+                },
+                {
+                    "key": "ausg_forschung",
+                    "fixed_values": {}
+                }
+            ]
+        }
+    ]
+}
