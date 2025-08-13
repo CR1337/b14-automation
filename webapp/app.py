@@ -1,6 +1,6 @@
 from webapp.app_io import AppIO
 from abc import ABC, abstractmethod
-from typing import Any, Dict, List, Tuple
+from typing import Any, Callable, Dict, List, Tuple
 from webapp.localization import Localization
 from webapp.app_messenger import AppMessenger
 from webapp.file_access_mixin import FileAccessMixin
@@ -59,11 +59,12 @@ class App(ABC, FileAccessMixin):
         self._localization = Localization(self._get_full_filename(self.LOCALIZATION_FILENAME))
 
     def get_translation(self, key: str) -> str:
+        if self.language is None:
+            raise ValueError("language was not set.")
         assert self.language is not None
         return self.get_translations(key)[self.language]
 
     def get_translations(self, key: str) -> Dict[str, str]:
-        assert self._language is not None
         return self._localization.get_translations(key)
 
     def _set_app_io_value(self, key: str, value: Any | None, app_ios: Dict[str, AppIO]):
@@ -119,3 +120,16 @@ class App(ABC, FileAccessMixin):
             "inputs": {k: v.to_dict() for k, v in self._inputs.items()},
             "outputs": {k: v.to_dict() for k, v in self._outputs.items()}
         }
+    
+    @staticmethod
+    @abstractmethod
+    def input_validators() -> Dict[str, Callable[[Any], bool]]:
+        raise NotImplementedError("@abstractmethod")
+    
+    @staticmethod
+    @abstractmethod
+    def output_validators() -> Dict[str, Callable[[Any], bool]]:
+        raise NotImplementedError("@abstractmethod")
+    
+
+ValidatorSet = Dict[str, Callable[[Any], bool]]

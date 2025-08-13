@@ -2,7 +2,7 @@ import time
 import io
 import zipfile
 from webapp.app import App
-from webapp.app_factory import AppFactory
+from typing import Dict, Callable, Any
 
 from lib.eu_tables_by_country.eu_tables_by_country import build_tables
 
@@ -47,8 +47,10 @@ class EuTablesByCountryApp(App):
         assert self.messenger is not None
         self.messenger.clear_message()
 
-
-class EuTablesByCountryAppFactory(AppFactory):
-
-    def create(self) -> App:
-        return EuTablesByCountryApp(*self.config_from_file())
+    @staticmethod
+    def input_validators() -> Dict[str, Callable[[Any], bool]]:
+        return {}
+    
+    @staticmethod
+    def output_validators() -> Dict[str, Callable[[Any], bool]]:
+        return {}

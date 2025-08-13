@@ -1,9 +1,9 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 import json
 from webapp.app import App
 from webapp.app_io import AppIO
 from webapp.file_access_mixin import FileAccessMixin
-from typing import Any, Dict, List, Tuple, Callable
+from typing import Any, Dict, List, Tuple, Callable, Type
 
 
 class AppFactory(ABC, FileAccessMixin):
@@ -17,8 +17,7 @@ class AppFactory(ABC, FileAccessMixin):
         self._input_validators = {}
         self._output_validators = {}
 
-    def config_from_file(self) -> Tuple[Dict[str, str], List[AppIO], List[AppIO]]:
-        filename = self._get_full_filename(self.CONFIG_FILENAME)
+    def config_from_file(self, filename: str) -> Tuple[Dict[str, str], List[AppIO], List[AppIO]]:
         with open(filename, "r", encoding="utf-8") as file:
             config = json.load(file)
         name = config["name"]
@@ -34,12 +33,13 @@ class AppFactory(ABC, FileAccessMixin):
         outputs = [AppIO.make_output(**o) for o in outputs]
         return name, inputs, outputs
 
-    @abstractmethod
-    def create(self) -> App:
-        raise NotImplementedError("@abstractmethod")
-    
-    def add_input_validator(self, key: str, validator: Callable[[Any], bool]):
-        self._input_validators[key] = validator
-
-    def add_output_validator(self, key: str, validator: Callable[[Any], bool]):
-        self._output_validators[key] = validator
+    def create(
+        self, 
+        app_class: Type[App],
+        input_validators: Dict[str, Callable[[Any], bool]] | None = None,
+        output_validators: Dict[str, Callable[[Any], bool]] | None = None
+    ) -> App:
+        self._input_validators = input_validators or {}
+        self._output_validators = output_validators or {}
+        config_filename = app_class._get_full_filename(self.CONFIG_FILENAME)
+        return app_class(*self.config_from_file(config_filename))
