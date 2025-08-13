@@ -5,6 +5,7 @@ from lib.eurostat.eurostat_api.dataset import EurostatDataset
 from lib.eurostat.eurostat_api.filters import DimensionFilter, TimePeriodFilter
 
 import lib.auto_text.util as u
+import lib.constants.constants as c
 import pandas as pd
 from typing import List, Tuple
 
@@ -104,7 +105,7 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
     ) -> List[Tuple[str, str]]:
         pairs = list(
             zip(
-                df["geo"].map(lambda g: u.COUNTRY_NAMES_CASED[g][case]), df["observation"]
+                df["geo"].map(lambda g: c.COUNTRY_NAMES_CASED[g][case]), df["observation"]
             )
         )
         pairs = [p for p in pairs if not pd.isna(p[0])]
@@ -115,10 +116,10 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
         return pairs
 
     def _pair_to_str(self, ps: List[Tuple[str, str]], i: int, unit: str = "%") -> str:
-        return f"{ps[i][0]} ({ps[i][1]}{u.NBSP}{unit})"
+        return f"{ps[i][0]} ({ps[i][1]}{c.NBSP}{unit})"
 
     def month_year(self) -> str:
-        return f"{u.MONTHS[self._month]} {self._year:04d}"
+        return f"{c.MONTHS[self._month]} {self._year:04d}"
 
     def unemployment_tot_perc(self) -> str:
         df = self._df("TOTAL", "PC_ACT")
@@ -171,7 +172,7 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
     def unemployment_tot_tot_eu(self) -> str:
         df = self._df("TOTAL", "THS_PER")
         df = df[df["geo"] == "EU27_2020"]
-        value = df["observation"].values[0] / u.THOUSANDS_PER_MIILLION
+        value = df["observation"].values[0] / c.THOUSANDS_PER_MIILLION
         return u.format_value(value)
 
     def unemployment_tot_perc_eu(self) -> str:
@@ -261,7 +262,7 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
             .tolist()
         )
         country_ids = nan_country_ids + not_found_country_ids
-        countries = [u.COUNTRY_NAMES_CASED[cid]["N"] for cid in country_ids]
+        countries = [c.COUNTRY_NAMES_CASED[cid]["N"] for cid in country_ids]
 
         sentence_suffix = (
             f"keine Jugenderwerbslosenquoten für {self.month_year()} geliefert.\n"
@@ -315,7 +316,7 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
             unemployment_lt25_perc_countries_lowest=self.unemployment_lt25_perc_countries_lowest(),
             unemployment_lt25_perc_countries_highest=self.unemployment_lt25_perc_countries_highest(),
             countries_no_lt25=self.countries_no_lt25(),
-            nbsp=u.NBSP,
+            nbsp=c.NBSP,
         )
 
         return text

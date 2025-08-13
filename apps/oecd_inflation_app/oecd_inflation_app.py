@@ -5,7 +5,7 @@ from datetime import date
 from webapp.app import App
 from webapp.app_factory import AppFactory
 
-from lib.oecd_inflation.oecd_inflation import generate_dataframe
+from lib.oecd_inflation.oecd_inflation import OecdInflation
 
 
 class OecdInflationApp(App):
@@ -29,7 +29,7 @@ class OecdInflationApp(App):
         assert isinstance(date_, date)
         year, month = date_.year, date_.month
 
-        table = generate_dataframe(year, month)
+        table = OecdInflation().generate_dataframe(year, month)
 
         if table is None:
             if self._language == "de":
