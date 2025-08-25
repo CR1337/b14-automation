@@ -50,9 +50,9 @@ Deutschland mit {unemployment_tot_perc}{nbsp}% auf Rang {rank_de}
 
 In Deutschland waren im {month_year} rund {unemployment_tot_perc}{nbsp}% der 15- bis 74-jährigen Erwerbspersonen ohne Arbeit. Im EU-Vergleich war {unemployment_tot_perc_countries}.
 
-EU-weit waren im {month_year} rund {unemployment_tot_tot_eu}{nbsp}Millionen Menschen ohne Arbeit. Das entsprach einer Erwerbslosenquote von {unemployment_tot_perc_eu}{nbsp}%. Die Erwerbs­losen­quote in der Euro­zone lag mit {unemployment_tot_perc_ez}{nbsp}% {eu_ez_comp} dem Niveau der gesamten EU. Der größte Mangel an Arbeitsplätzen herrschte in {unemployment_tot_perc_countries_highest}.
+EU-weit waren im {month_year} rund {unemployment_tot_tot_eu}{nbsp}Millionen Menschen ohne Arbeit. Das entsprach einer Erwerbslosenquote von {unemployment_tot_perc_eu}{nbsp}%. Der größte Mangel an Arbeitsplätzen herrschte in {unemployment_tot_perc_countries_highest}.
 
-Die Jugenderwerbslosenquote in der EU-27 betrug im {month_year} rund {unemployment_lt25_perc_eu}{nbsp}% und betrug damit {unemployment_lt25_perc_eu_rel}{nbsp}% des Durchschnitts aller Erwerbstätigen. Die niedrigsten Quoten verzeichneten {unemployment_lt25_perc_countries_lowest}. Am höchsten waren die Anteile in {unemployment_lt25_perc_countries_highest}.{countries_no_lt25}
+Die Jugenderwerbslosenquote in der EU-27 betrug im {month_year} rund {unemployment_lt25_perc_eu}{nbsp}% und lab damit {unemployment_lt25_eu_comparison} dem Durchschnitt aller Erwerbstätigen. Die niedrigsten Quoten verzeichneten {unemployment_lt25_perc_countries_lowest}. Am höchsten waren die Anteile in {unemployment_lt25_perc_countries_highest}.{countries_no_values}
 
 Methodik
 
@@ -95,8 +95,8 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
         df["observation"] = df["observation"].astype(float)
         df = df [
             (df["time"] == self._time())
-            & (df["age"] == "TOTAL")
-            & (df["unit"] == "PC_ACT")
+            & (df["age"] == age)
+            & (df["unit"] == unit)
         ]
         return df
 
@@ -181,22 +181,6 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
         value = df["observation"].values[0]
         return u.format_value(value)
 
-    def unemployment_tot_perc_ez(self) -> str:
-        df = self._df("TOTAL", "PC_ACT")
-        df = df[df["geo"] == "EA20"]
-        value = df["observation"].values[0]
-        return u.format_value(value)
-
-    def eu_ez_comp(self) -> str:
-        eu_value = u.from_str(self.unemployment_tot_perc_eu())
-        ez_value = u.from_str(self.unemployment_tot_perc_ez())
-        if eu_value > ez_value:
-            return "unter"
-        elif eu_value < ez_value:
-            return "über"
-        else:
-            return "auf"
-
     def unemployment_tot_perc_countries_highest(self) -> str:
         n_countries = 2
         df = self._df("TOTAL", "PC_ACT")
@@ -215,11 +199,29 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
         value = df["observation"].values[0]
         return u.format_value(value)
 
-    def unemployment_lt25_perc_eu_rel(self) -> str:
+    def unemployment_lt25_perc_eu_rel(self) -> float:
         value_lt25 = u.from_str(self.unemployment_lt25_perc_eu())
         value_tot = u.from_str(self.unemployment_tot_perc_eu())
-        result = (value_lt25 / value_tot) * 100
-        return u.format_value(result)
+        return (value_lt25 / value_tot) * 100
+    
+    def unemployment_lt25_eu_comparison(self) -> str:
+        perc = self.unemployment_lt25_perc_eu_rel()
+
+        if perc < 0.01:
+            return "deutlich unter"
+        elif perc < 0.1:
+            return "unter"
+        elif perc < 1:
+            return "knapp unter"
+        elif perc == 1:
+            return "auf"
+        elif perc < 10:
+            return "knapp über"
+        elif perc < 100:
+            return "über"
+        else:
+            return "deutlich über"
+        
 
     def unemployment_lt25_perc_countries_lowest(self) -> str:
         df = self._df("Y_LT25", "PC_ACT")
@@ -246,7 +248,26 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
         return u.enumerate_terms([self._pair_to_str(pairs, i) for i in range(n_countries)])
 
     def countries_no_lt25(self) -> str:
-        df = self._df("Y_LT25", "PC_ACT")
+        return self.countries_no_value("Y_LT25", "Jugenderwerbslosenquote", "Jugenderwerbslosenquoten")
+    
+    def countries_no_total(self) -> str:
+        return self.countries_no_value("TOTAL", "Erbslosenquote", "Erwerbslosenquoten")
+
+    def countries_no_values(self) -> str:
+        no_total = self.countries_no_value("TOTAL", "Erbslosenquote", "Erwerbslosenquoten")
+        no_lt25 = self.countries_no_value("Y_LT25", "Jugenderwerbslosenquote", "Jugenderwerbslosenquoten")
+
+        if no_total and no_lt25:
+            return f"\n\n{no_total}\n{no_lt25}"
+        elif no_total:
+            return f"\n\n{no_total}"
+        elif no_lt25:
+            return f"\n\n{no_lt25}"
+        else:
+            return ""
+   
+    def countries_no_value(self, age: str, value_name: str, plural_value_name: str) -> str:
+        df = self._df(age, "PC_ACT")
         df = df[
             (df["geo"] != "EU27_2020")
             & (df["geo"] != "EA20")
@@ -265,16 +286,16 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
         countries = [c.COUNTRY_NAMES_CASED[cid]["N"] for cid in country_ids]
 
         sentence_suffix = (
-            f"keine Jugenderwerbslosenquoten für {self.month_year()} geliefert.\n"
+            f"keine {value_name if len(countries) == 1 else plural_value_name} für {self.month_year()} geliefert."
         )
 
         match len(countries):
             case 0:
                 return ""
             case 1:
-                return f"\n\n{countries[0]} hat {sentence_suffix}"
+                return f"{countries[0]} hat {sentence_suffix}"
             case _:
-                return f"\n\n{u.enumerate_terms(countries)} haben {sentence_suffix}"
+                return f"{u.enumerate_terms(countries)} haben {sentence_suffix}"
 
     @classmethod
     def construct(cls) -> ErwerbslosigkeitTextGenerator:  # type: ignore
@@ -308,14 +329,12 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
             unemployment_tot_perc_countries=self.unemployment_tot_perc_countries(),
             unemployment_tot_tot_eu=self.unemployment_tot_tot_eu(),
             unemployment_tot_perc_eu=self.unemployment_tot_perc_eu(),
-            unemployment_tot_perc_ez=self.unemployment_tot_perc_ez(),
-            eu_ez_comp=self.eu_ez_comp(),
             unemployment_tot_perc_countries_highest=self.unemployment_tot_perc_countries_highest(),
             unemployment_lt25_perc_eu=self.unemployment_lt25_perc_eu(),
-            unemployment_lt25_perc_eu_rel=self.unemployment_lt25_perc_eu_rel(),
+            unemployment_lt25_eu_comparison=self.unemployment_lt25_eu_comparison(),
             unemployment_lt25_perc_countries_lowest=self.unemployment_lt25_perc_countries_lowest(),
             unemployment_lt25_perc_countries_highest=self.unemployment_lt25_perc_countries_highest(),
-            countries_no_lt25=self.countries_no_lt25(),
+            countries_no_values=self.countries_no_values(),
             nbsp=c.NBSP,
         )
 
