@@ -3,9 +3,7 @@ from abc import ABC, abstractmethod
 from typing import Dict
 from datetime import datetime
 
-# from lib.eurostat.eurostat_api.dataset import EurostatDataset
-
-from ..eurostat.eurostat_api.dataset import EurostatDataset
+from lib.eurostat.eurostat_api.dataset import EurostatDataset
 
 
 class EurostatAutoTextGenerator(ABC):

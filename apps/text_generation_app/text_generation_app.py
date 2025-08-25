@@ -1,7 +1,7 @@
 import time
 from datetime import date
 from webapp.app import App
-from webapp.app_factory import AppFactory
+from typing import Dict, Callable, Any
 
 from lib.auto_text.erwerbslosigkeit import ErwerbslosigkeitTextGenerator
 
@@ -65,8 +65,10 @@ class TextGenerationApp(App):
         assert self.messenger is not None
         self.messenger.clear_message()
 
-
-class TextGenerationAppFactory(AppFactory):
-
-    def create(self) -> App:
-        return TextGenerationApp(*self.config_from_file())
+    @staticmethod
+    def input_validators() -> Dict[str, Callable[[Any], bool]]:
+        return {}
+    
+    @staticmethod
+    def output_validators() -> Dict[str, Callable[[Any], bool]]:
+        return {}

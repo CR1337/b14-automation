@@ -3,9 +3,9 @@ import pandas as pd
 from io import StringIO
 from datetime import date
 from webapp.app import App
-from webapp.app_factory import AppFactory
+from typing import Dict, Callable, Any
 
-from lib.oecd_inflation.oecd_inflation import generate_dataframe
+from lib.oecd_inflation.oecd_inflation import OecdInflation
 
 
 class OecdInflationApp(App):
@@ -29,7 +29,7 @@ class OecdInflationApp(App):
         assert isinstance(date_, date)
         year, month = date_.year, date_.month
 
-        table = generate_dataframe(year, month)
+        table = OecdInflation().generate_dataframe(year, month)
 
         if table is None:
             if self._language == "de":
@@ -58,8 +58,11 @@ class OecdInflationApp(App):
         assert self.messenger is not None
         self.messenger.clear_message()
 
-
-class OecdInflationAppFactory(AppFactory):
-
-    def create(self) -> App:
-        return OecdInflationApp(*self.config_from_file())
+    @staticmethod
+    def input_validators() -> Dict[str, Callable[[Any], bool]]:
+        return {}
+    
+    @staticmethod
+    def output_validators() -> Dict[str, Callable[[Any], bool]]:
+        return {}
+    

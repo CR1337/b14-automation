@@ -9,8 +9,11 @@ LANGUAGES_FILENAME: str = os.path.join("localization", "languages.json")
 
 @st.cache_data
 def _translations(filename: str) -> Dict[str, Dict[str, str]]:
-    with open(filename, 'r', encoding='utf-8') as file:
-        return json.load(file)
+    try:
+        with open(filename, 'r', encoding='utf-8') as file:
+            return json.load(file)
+    except OSError:
+        return {}
 
 @st.cache_data
 def _languages() -> Dict[str, Dict[str, str]]:
