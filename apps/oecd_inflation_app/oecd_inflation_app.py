@@ -5,7 +5,7 @@ from datetime import date
 from webapp.app import App
 from typing import Dict, Callable, Any
 
-from lib.oecd_inflation.oecd_inflation import OecdInflation
+from lib.oecd_inflation.oecd_inflation import OecdInflation, Frequency
 
 
 class OecdInflationApp(App):
@@ -29,7 +29,11 @@ class OecdInflationApp(App):
         assert isinstance(date_, date)
         year, month = date_.year, date_.month
 
-        table = OecdInflation().generate_dataframe(year, month)
+        frequency_index = self.get_input("frequency")
+        assert isinstance(frequency_index, int)
+        frequency = Frequency(("M", "Q", "A")[frequency_index])
+
+        table = OecdInflation().generate_dataframe(year, month, frequency)
 
         if table is None:
             if self._language == "de":
