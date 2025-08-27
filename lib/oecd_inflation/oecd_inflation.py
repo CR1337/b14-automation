@@ -73,8 +73,6 @@ class OecdInflation:
         )
         df = df.dropna(subset=['country'])
 
-        print(df["TIME_PERIOD"], flush=True)
-
         match frequency:
             case Frequency.MONTHLY:
                 df['time'] = df['TIME_PERIOD'].apply(
@@ -91,7 +89,6 @@ class OecdInflation:
                     lambda x: f"{x}/01/01"
                 ) 
 
-                
         df = df.sort_values(by='TIME_PERIOD')
 
         df['value'] = df['OBS_VALUE'].apply(
