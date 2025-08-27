@@ -44,7 +44,7 @@ class ErwerbslosigkeitTextGenerator(EurostatAutoTextGenerator):
     ]
 
     TEMPLATE: str = """
-EU-weite Erwerbslosigkeit liegt im {month_year} bei {unemployment_tot_perc_eu}{nbsp}%
+EU-weite Erwerbslosenquote liegt im {month_year} bei {unemployment_tot_perc_eu}{nbsp}%
 
 Deutschland mit {unemployment_tot_perc}{nbsp}% auf Rang {rank_de}
 
@@ -52,7 +52,7 @@ In Deutschland waren im {month_year} rund {unemployment_tot_perc}{nbsp}% der 15-
 
 EU-weit waren im {month_year} rund {unemployment_tot_tot_eu}{nbsp}Millionen Menschen ohne Arbeit. Das entsprach einer Erwerbslosenquote von {unemployment_tot_perc_eu}{nbsp}%. Der größte Mangel an Arbeitsplätzen herrschte in {unemployment_tot_perc_countries_highest}.
 
-Die Jugenderwerbslosenquote in der EU-27 betrug im {month_year} rund {unemployment_lt25_perc_eu}{nbsp}% und lab damit {unemployment_lt25_eu_comparison} dem Durchschnitt aller Erwerbstätigen. Die niedrigsten Quoten verzeichneten {unemployment_lt25_perc_countries_lowest}. Am höchsten waren die Anteile in {unemployment_lt25_perc_countries_highest}.{countries_no_values}
+Die Jugenderwerbslosenquote in der EU-27 betrug im {month_year} rund {unemployment_lt25_perc_eu}{nbsp}% und lag damit {unemployment_lt25_eu_comparison} dem Durchschnitt aller Erwerbstätigen. Die niedrigsten Quoten verzeichneten {unemployment_lt25_perc_countries_lowest}. Am höchsten waren die Anteile in {unemployment_lt25_perc_countries_highest}.{countries_no_values}
 
 Methodik
 
@@ -254,7 +254,7 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
         return self.countries_no_value("TOTAL", "Erbslosenquote", "Erwerbslosenquoten")
 
     def countries_no_values(self) -> str:
-        no_total = self.countries_no_value("TOTAL", "Erbslosenquote", "Erwerbslosenquoten")
+        no_total = self.countries_no_value("TOTAL", "Erwerbslosenquote", "Erwerbslosenquoten")
         no_lt25 = self.countries_no_value("Y_LT25", "Jugenderwerbslosenquote", "Jugenderwerbslosenquoten")
 
         if no_total and no_lt25:
