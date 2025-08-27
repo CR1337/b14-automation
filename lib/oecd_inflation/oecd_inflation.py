@@ -2,7 +2,7 @@ import pandas as pd
 from io import StringIO
 from datetime import datetime
 from enum import Enum
-from typing import List
+from typing import List, Dict
 
 from lib.network.get import get_from_url
 
@@ -14,11 +14,10 @@ class Frequency(Enum):
 
 
 class OecdInflation:
-    URL = "https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_PRICES@DF_PRICES_ALL,1.0/.{frequency}.N.CPI.PA._T.N.GY?format=csvfile&startPeriod={year}-{month:02d}"
-    DECIMAL_DIGITS = 2
+    URL: str = "https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_PRICES@DF_PRICES_ALL,1.0/.{frequency}.N.CPI.PA._T.N.GY?format=csvfile&startPeriod={year}-{month:02d}"
+    DECIMAL_DIGITS: int = 2
 
-    TRANSLATIONS = {
-        "countries": {
+    COUNTRY_TRANSLATIONS: Dict[str, str] = {
             "MEX": "Mexiko",
             "BRA": "Brasilien",
             "ARG": "Argentinien",
@@ -37,8 +36,8 @@ class OecdInflation:
             "SAU": "Saudi Arabien",
             "KOR": "Korea, Republik",
             "IND": "Indien"
-        },
-        "months": [
+        }
+    MONTHS_TRANSLATIONS: List[str] = [
             "Jan",
             "Feb",
             "Mrz",
@@ -52,9 +51,6 @@ class OecdInflation:
             "Nov",
             "Dez"
         ]
-    }
-    COUNTRY_TRANSLATIONS = TRANSLATIONS['countries']
-    MONTHS_TRANSLATIONS = TRANSLATIONS['months']
 
     QUARTER_TO_MONTH: List[int] = [0, 1, 4, 7, 10]
 
