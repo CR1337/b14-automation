@@ -2,6 +2,7 @@ import time
 from datetime import date
 from webapp.app import App
 from typing import Dict, Callable, Any
+from datetime import date
 
 from lib.auto_text.erwerbslosigkeit import ErwerbslosigkeitTextGenerator
 
@@ -34,14 +35,19 @@ class TextGenerationApp(App):
         date_ = self.get_input("date")
         assert isinstance(date_, date)
         year, month = date_.year, date_.month
-        self._text_generator.request_data(year, month)
-        time.sleep(1)
+        if date_ > date.today(): #check date to avoid bad requests
+            text = None 
+        else:     
+            self._text_generator.request_data(year, month)
 
-        self.messenger.set_message({
-            "de":"Erstelle Text...", 
-            "en": "Creating text..."
-        })
-        text = self._text_generator.generate()
+            time.sleep(1)
+
+            self.messenger.set_message({
+                "de":"Erstelle Text...", 
+                "en": "Creating text..."
+            })
+            text = self._text_generator.generate()
+        
 
         if text is None:
             if self._language == "de":
