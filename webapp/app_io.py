@@ -154,6 +154,7 @@ class AppIO:
         return self.validator(self.value)
     
     def render_input(self, language: str) -> Tuple[bool, bool]:
+        ("render input")
         old_value = self.value
         match self.type:
             case AppIOType.BOOL:
@@ -348,14 +349,15 @@ class AppIO:
                     filename = f"{language}_{filename}"
                 if self.parameters.get("prefix_datetime", False):
                     filename = f"{datetime.now().strftime('%Y%m%d_%H%M%S')}_{filename}"
-                st.download_button(
-                    label=self.name[language],
-                    data=str(self.value),
-                    file_name=filename,
-                    mime=self.parameters.get("mime", "text/plain"),
-                    key=self.key,
-                    use_container_width=True
-                )
+                if len(self.value) > 0: #Download button only if the is data available
+                    st.download_button(
+                        label=self.name[language],
+                        data=str(self.value),
+                        file_name=filename,
+                        mime=self.parameters.get("mime", "text/plain"),
+                        key=self.key,
+                        use_container_width=True
+                    )
                 
             case AppIOType.BINARY_FILE:
                 assert isinstance(self.value, bytes)
@@ -364,6 +366,7 @@ class AppIO:
                     filename = f"{language}_{filename}"
                 if self.parameters.get("prefix_datetime", False):
                     filename = f"{datetime.now().strftime('%Y%m%d_%H%M%S')}_{filename}"
+
                 st.download_button(
                     label=self.name[language],
                     data=self.value,
