@@ -8,6 +8,8 @@ import lib.auto_text.util as u
 import lib.constants.constants as c
 import pandas as pd
 from typing import List, Tuple
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 
 class ErwerbslosigkeitTextGenerator(EurostatAutoTextGenerator):
@@ -53,6 +55,9 @@ In Deutschland waren im {month_year} rund {unemployment_tot_perc}{nbsp}% der 15-
 EU-weit waren im {month_year} rund {unemployment_tot_tot_eu}{nbsp}Millionen Menschen ohne Arbeit. Das entsprach einer Erwerbslosenquote von {unemployment_tot_perc_eu}{nbsp}%. Der größte Mangel an Arbeitsplätzen herrschte in {unemployment_tot_perc_countries_highest}.
 
 Die Jugenderwerbslosenquote in der EU-27 betrug im {month_year} rund {unemployment_lt25_perc_eu}{nbsp}% und lag damit {unemployment_lt25_eu_comparison} dem Durchschnitt aller Erwerbstätigen. Die niedrigsten Quoten verzeichneten {unemployment_lt25_perc_countries_lowest}. Am höchsten waren die Anteile in {unemployment_lt25_perc_countries_highest}.{countries_no_values}
+
+Datenbankauszug Stand {date}.
+
 
 Methodik
 
@@ -335,6 +340,7 @@ Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank,
             unemployment_lt25_perc_countries_lowest=self.unemployment_lt25_perc_countries_lowest(),
             unemployment_lt25_perc_countries_highest=self.unemployment_lt25_perc_countries_highest(),
             countries_no_values=self.countries_no_values(),
+            date=datetime.now(ZoneInfo("Europe/Berlin")).strftime("%d.%m.%Y"),
             nbsp=c.NBSP,
         )
 
