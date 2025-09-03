@@ -11,6 +11,28 @@
                 "en": "Startdate"
             },
             "type": "date"
+        },
+        {
+            "key": "frequency",
+            "name": {
+                "de": "Zeitintervall",
+                "en": "Time frequency"
+            },
+            "type": "selection",
+            "parameters": {
+                "options": {
+                    "de": [
+                        "Monate",
+                        "Quartale",
+                        "Jahre"
+                    ],
+                    "en": [
+                        "Months",
+                        "Quarters",
+                        "Years"
+                    ]
+                }
+            }
         }
     ],
     "outputs": [
