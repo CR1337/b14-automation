@@ -282,8 +282,8 @@ class ErwerbslosigkeitTextGenerator(EurostatAutoTextGenerator):
                 return f"{u.enumerate_terms(countries)} haben {sentence_suffix}"
 
     @classmethod
-    def construct(cls) -> ErwerbslosigkeitTextGenerator:  # type: ignore
-        generator = super().construct("erwerbslosigkeit")
+    def construct(cls, template: str) -> ErwerbslosigkeitTextGenerator:  # type: ignore
+        generator = super().construct("erwerbslosigkeit", template)
         dataset = EurostatDataset("une_rt_m", "de")
         dimension_filter = DimensionFilter(dataset)
         dimension_filter.add("age", ["TOTAL", "Y_LT25"])
@@ -306,7 +306,7 @@ class ErwerbslosigkeitTextGenerator(EurostatAutoTextGenerator):
         if not self._data_available():
             return None
         
-        text = self.TEMPLATE.format(
+        text = self._template.format(
             month_year=self.month_year(),
             unemployment_tot_perc=self.unemployment_tot_perc(),
             rank_de=self.rank_de(),

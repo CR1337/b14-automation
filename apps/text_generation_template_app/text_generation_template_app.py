@@ -6,7 +6,7 @@ from typing import Dict, Callable, Any
 
 class TextGenerationTemplateApp(App):
 
-    TEMPLATE_FILENAME: str = "data/erwerbslosigkeit_template_test.txt"
+    TEMPLATE_FILENAME: str = "data/erwerbslosigkeit_template.txt"
 
     def initialize(self, language: str):
         assert self.messenger is not None

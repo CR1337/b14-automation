@@ -1,6 +1,8 @@
+import os
 import time
 from datetime import date
 from webapp.app import App
+from webapp.github_storage import GithubStorage
 from typing import Dict, Callable, Any
 
 from lib.auto_text.erwerbslosigkeit import ErwerbslosigkeitTextGenerator
@@ -20,7 +22,12 @@ class TextGenerationApp(App):
         topic_index = self.get_input("topic")
         match topic_index:
             case 0:  # unemploment rate
-                self._text_generator = ErwerbslosigkeitTextGenerator.construct()
+                storage = GithubStorage("data/erwerbslosigkeit_template.txt")
+                success, template = storage.load_content()
+                if not success:
+                    with open(os.path.join("data", "erwerbslosigkeit_template.txt"), 'r') as file:
+                        template = file.read()
+                self._text_generator = ErwerbslosigkeitTextGenerator.construct(template)
             case _:
                 raise ValueError(f"Invalid topic index: {topic_index}")
         time.sleep(2)

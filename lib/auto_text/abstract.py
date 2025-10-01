@@ -10,14 +10,16 @@ class EurostatAutoTextGenerator(ABC):
 
     _name: str
     _datasets: Dict[str, EurostatDataset]
+    _template: str
     TIMESTAMP = datetime.now().strftime("%Y%m%d-%H%M%S")
 
     @classmethod
-    def construct(cls, name: str) -> EurostatAutoTextGenerator:
-        return cls(name)
+    def construct(cls, name: str, template: str) -> EurostatAutoTextGenerator:
+        return cls(name, template)
 
-    def __init__(self, name: str):
+    def __init__(self, name: str, template: str):
         self._name = name
+        self._template = template
         self._datasets = {}
 
     def add_dataset(self, key: str, dataset: EurostatDataset):

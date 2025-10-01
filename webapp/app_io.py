@@ -184,22 +184,36 @@ class AppIO:
                 )
 
             case AppIOType.STRING | AppIOType.FILENAME | AppIOType.URL:
+                placeholder = self.parameters.get("placeholder")
+                if not placeholder:
+                    filename = self.parameters.get("placeholder_from_file")
+                    if filename:
+                        with open(filename, 'r') as file:
+                            placeholder = file.read()
+
+                value = None
+                value_filename = self.parameters.get("value_from_file")
+                if value_filename:
+                    with open(value_filename, 'r') as file:
+                        value = file.read()
+
+
                 if self.parameters.get("multiline", False):
                     self.value = st.text_area(
                         label=self.name[language], 
-                        value=self.value, 
+                        value=value or self.value, 
                         max_chars=self.parameters.get("max_chars"),
                         key=self.key,
-                        placeholder=self.parameters.get("placeholder")
+                        placeholder=placeholder
                     )
                 else:
                     self.value = st.text_input(
                         label=self.name[language], 
-                        value=self.value, 
+                        value=value or self.value, 
                         max_chars=self.parameters.get("max_chars"),
                         key=self.key,
                         type=self.parameters.get("type", "default"),
-                        placeholder=self.parameters.get("placeholder")
+                        placeholder=placeholder
                     )
 
             case AppIOType.DATETIME:
