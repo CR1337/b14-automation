@@ -15,6 +15,7 @@ class App(ABC, FileAccessMixin):
     _name: Dict[str, str]
     _language: str | None
     _localization: Localization
+    _authentication_required: bool
     
     messenger: AppMessenger | None
     
@@ -36,6 +37,10 @@ class App(ABC, FileAccessMixin):
         return self._name
     
     @property
+    def authentication_required(self) -> bool:
+        return self._authentication_required
+    
+    @property
     def key(self) -> str:
         return list(self.name.values())[0].lower().strip().replace(" ", "_")
     
@@ -50,8 +55,9 @@ class App(ABC, FileAccessMixin):
     def __repr__(self) -> str:
         return f"App({self._name=}, {self.key=}, {len(self._inputs)=}, {len(self._outputs)=}"
 
-    def __init__(self, name: Dict[str, str], inputs: List[AppIO], outputs: List[AppIO]):
+    def __init__(self, name: Dict[str, str], authentication_required: bool, inputs: List[AppIO], outputs: List[AppIO]):
         self._name = name
+        self._authentication_required = authentication_required
         self._inputs = {x.key: x for x in inputs}
         self._outputs = {x.key: x for x in outputs}
         self.messenger = None

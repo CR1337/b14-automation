@@ -78,6 +78,8 @@ class WebApp:
 
             st.header(self._localization.get("apps", language), divider="gray")
             for app in apps:
+                if app.authentication_required and not Authentication.is_authenticated():
+                    continue
                 if st.button(
                     label=app.name[language],
                     key=app.key,

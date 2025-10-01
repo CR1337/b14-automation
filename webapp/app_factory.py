@@ -17,10 +17,11 @@ class AppFactory(ABC, FileAccessMixin):
         self._input_validators = {}
         self._output_validators = {}
 
-    def config_from_file(self, filename: str) -> Tuple[Dict[str, str], List[AppIO], List[AppIO]]:
+    def config_from_file(self, filename: str) -> Tuple[Dict[str, str], bool, List[AppIO], List[AppIO]]:
         with open(filename, "r", encoding="utf-8") as file:
             config = json.load(file)
         name = config["name"]
+        authentication_required = config["authentication_required"]
         inputs = config["inputs"]
         outputs = config["outputs"]
         for i in inputs:
@@ -31,7 +32,7 @@ class AppFactory(ABC, FileAccessMixin):
             o["validator"] = self._output_validators.get(o["key"], lambda _: True)
         inputs = [AppIO.make_input(**i) for i in inputs]
         outputs = [AppIO.make_output(**o) for o in outputs]
-        return name, inputs, outputs
+        return name, authentication_required, inputs, outputs
 
     def create(
         self, 

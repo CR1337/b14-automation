@@ -1,0 +1,30 @@
+{
+    "name": {
+        "de": "Textgenerierung - Template verändern",
+        "en": "Text Generation - Change the Template"
+    },
+    "authentication_required": true,
+    "inputs": [
+        {
+            "key": "template",
+            "name": {
+                "de": "Neues Template",
+                "en": "New template"
+            },
+            "type": "str",
+            "parameters": {
+                "multiline": true
+            }
+        }
+    ],
+    "outputs": [
+        {
+            "key": "status",
+            "name": {
+                "de": "Statusnachricht",
+                "en": "Status Message"
+            },
+            "type": "str"
+        }
+    ]
+}

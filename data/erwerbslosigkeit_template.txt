@@ -1,0 +1,24 @@
+EU-weite Erwerbslosenquote liegt im {month_year} bei {unemployment_tot_perc_eu}{nbsp}%
+
+Deutschland mit {unemployment_tot_perc}{nbsp}% auf Rang {rank_de}
+
+In Deutschland waren im {month_year} rund {unemployment_tot_perc}{nbsp}% der 15- bis 74-jährigen Erwerbspersonen ohne Arbeit. Im EU-Vergleich war {unemployment_tot_perc_countries}.
+
+EU-weit waren im {month_year} rund {unemployment_tot_tot_eu}{nbsp}Millionen Menschen ohne Arbeit. Das entsprach einer Erwerbslosenquote von {unemployment_tot_perc_eu}{nbsp}%. Der größte Mangel an Arbeitsplätzen herrschte in {unemployment_tot_perc_countries_highest}.
+
+Die Jugenderwerbslosenquote in der EU-27 betrug im {month_year} rund {unemployment_lt25_perc_eu}{nbsp}% und lag damit {unemployment_lt25_eu_comparison} dem Durchschnitt aller Erwerbstätigen. Die niedrigsten Quoten verzeichneten {unemployment_lt25_perc_countries_lowest}. Am höchsten waren die Anteile in {unemployment_lt25_perc_countries_highest}.{countries_no_values}
+
+Datenbankauszug Stand {date}.
+
+
+Methodik
+
+Die Erwerbslosenquote nach der Definition der ILO ist der Anteil der Erwerbslosen an den Erwerbspersonen.
+
+Die Erwerbspersonen setzen sich aus den Erwerbstätigen und den Erwerbslosen zusammen.
+
+Erwerbstätige im Sinne der Internationalen Arbeitsorganisation (ILO)-Definition sind Personen im Alter von 15 Jahren und mehr, die mindestens eine Stunde in der Woche gegen Entgelt irgendeiner beruflichen Tätigkeit nachgehen beziehungsweise in einem Arbeitsverhältnis stehen.
+
+Quelle
+
+Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank, weitere Informationen in Statistics Explained. Detaillierte Daten zur Erwerbslosigkeit in Deutschland gibt es auf den nationalen Themenseiten.
