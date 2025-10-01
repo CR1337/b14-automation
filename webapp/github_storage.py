@@ -2,8 +2,6 @@ import streamlit as st
 import requests
 import base64
 
-from webapp.authentication import Authentication
-
 from typing import Dict, Tuple
 
 
@@ -16,22 +14,17 @@ class GithubStorage:
     _filename: str
     _url: str
     _headers: Dict[str, str]
-    _requires_authentication: bool
     _sha: str
     _loaded: bool
 
-    def __init__(self, filename: str, requires_authentication: bool = True):
+    def __init__(self, filename: str):
         self._filename = filename
         self._url = self.GITHUB_URL.format(repo=self.GITHUB_REPO, filename=filename)
         self._headers = {"Authorization": f"token {self.GITHUB_TOKEN}"}
-        self._requires_authentication = requires_authentication
         self._sha = ""
         self._loaded = False
 
     def load_content(self) -> Tuple[bool, str]:
-        if self._requires_authentication and not Authentication.is_authenticated():
-            return False, "Not authenticated"
-        
         try:
             response = requests.get(self._url, headers=self._headers)
             response.raise_for_status()
@@ -47,10 +40,6 @@ class GithubStorage:
             return True, content
 
     def store_content(self, content: str) -> bool:
-        if self._requires_authentication and not Authentication.is_authenticated():
-            st.error("Not authenticated")
-            return False
-        
         if not self._loaded:
             st.error(f"File {self._filename} must first be loaded once")
             return False
