@@ -10,6 +10,10 @@ def hash_password(password: str) -> str:
 
 def main():
     password = getpass("Enter password >")
+    password_2 = getpass("Reenter password >")
+    if password != password_2:
+        print("Passwords do not match!")
+        return
     hashed = hash_password(password)
     del password
     print(hashed)
