@@ -85,7 +85,7 @@ class WebApp:
                     key=app.key,
                     disabled=st.session_state["busy"],
                     use_container_width=True,
-                    type="primary",
+                    type="secondary" if app.authentication_required else "primary",
                 ):
                     st.session_state["selected_app"] = app
                     st.rerun()
