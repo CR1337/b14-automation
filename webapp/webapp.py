@@ -1,6 +1,7 @@
 import os
 import streamlit as st
 from apps.app_registry import apps
+from webapp.authentication import Authentication
 from webapp.app import App
 from webapp.app_messenger import AppMessenger, MESSENGERS
 from streamlit_autorefresh import st_autorefresh
@@ -86,6 +87,35 @@ class WebApp:
                 ):
                     st.session_state["selected_app"] = app
                     st.rerun()
+
+            st.header(self._localization.get("administration", language), divider="gray")
+            if Authentication.is_authenticated():
+                st.write(self._localization.get("logged_in", language))
+                if st.button(
+                    label=self._localization.get("logout", language),
+                    key="logout_button",
+                    use_container_width=True,
+                    type="primary"
+                ):
+                    Authentication.invalidate()
+                    st.rerun()
+            else:
+                if st.button(
+                    label=self._localization.get("login", language),
+                    key="login_button",
+                    use_container_width=True,
+                    type="primary"
+                ):
+                    self._authentication_dialog()
+
+    @st.dialog(" ")
+    def _authentication_dialog(self):
+        language = st.session_state["language"]
+        password = st.text_input(self._localization.get("password", language), type="password")
+        if st.button(self._localization.get("login", language), type="primary"):
+            Authentication.authenticate(password)
+            del password
+            st.rerun()
 
     def _render_app(self):
         language = st.session_state["language"]

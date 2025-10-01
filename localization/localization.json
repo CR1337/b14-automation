@@ -18,5 +18,25 @@
     "unexpected_error_message": {
         "de": "Ein unerwarteter Fehler ist aufgetreten. Bitte senden Sie die untenstehenden Fehlerinformationen an den Administrator dieser App.",
         "en": "An unexpected error has occurred. Please send the error information below to the administrator of this app."
-    }   
+    },
+    "administration": {
+        "de": "Administration",
+        "en": "Administration"
+    },
+    "login": {
+        "de": "Anmelden",
+        "en": "Login"
+    },
+    "logout": {
+        "de": "Abmelden",
+        "en": "Logout"
+    },
+    "logged_in": {
+        "de": "Sie sind angemeldet.",
+        "en": "You are logged in."
+    },
+    "password": {
+        "de": "Passwort",
+        "en": "Password"
+    }
 }
