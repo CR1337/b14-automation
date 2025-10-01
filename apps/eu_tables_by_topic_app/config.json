@@ -3,6 +3,7 @@
         "de": "EU Tabellen (nach Thema)",
         "en": "EU Tables (by Topic)"
     },
+    "authentication_required": false,
     "inputs": [
         {
             "key": "language_selection",

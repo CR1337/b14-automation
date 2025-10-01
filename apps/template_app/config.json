@@ -3,6 +3,7 @@
         "de": "App Schablone",
         "en": "Template App"
     },
+    "authentication_required": false,
     "inputs": [
         {
             "key": "name",

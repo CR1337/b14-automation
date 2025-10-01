@@ -3,6 +3,7 @@
         "de": "OECD Inflation",
         "en": "OECD Inflation"
     },
+    "authentication_required": false,
     "inputs": [
         {
             "key": "date",

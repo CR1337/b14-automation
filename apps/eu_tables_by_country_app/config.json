@@ -3,6 +3,7 @@
         "de": "EU Tabellen (nach Staat)",
         "en": "EU Tables (by Country)"
     },
+    "authentication_required": false,
     "inputs": [
         {
             "key": "language_selection",
