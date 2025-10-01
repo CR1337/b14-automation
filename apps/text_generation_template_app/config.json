@@ -13,7 +13,8 @@
             },
             "type": "str",
             "parameters": {
-                "multiline": true
+                "multiline": true,
+                "value_from_file": "data/erwerbslosigkeit_template.txt"
             }
         }
     ],
