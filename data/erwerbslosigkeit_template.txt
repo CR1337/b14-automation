@@ -22,3 +22,5 @@ Erwerbstätige im Sinne der Internationalen Arbeitsorganisation (ILO)-Definition
 Quelle
 
 Die monatlichen Daten zur Erwerbslosigkeit finden Sie in der Eurostat Datenbank, weitere Informationen in Statistics Explained. Detaillierte Daten zur Erwerbslosigkeit in Deutschland gibt es auf den nationalen Themenseiten.
+
+TEST
