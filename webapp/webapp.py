@@ -133,7 +133,7 @@ class WebApp:
             case _:
                 pass
 
-    def _run_app(self, app: App, messenger: AppMessenger, language: str):
+    def _run_app(self, app: App, messenger: AppMessenger, language: str) -> AppResult:
         app.set_messenger(messenger)
 
         for func, stage, args, kwargs in zip(
