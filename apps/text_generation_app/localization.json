@@ -1,0 +1,22 @@
+{
+    "initializing": {
+        "de": "Initialisiere Textgenerator...",
+        "en": "Initializing text generator..."
+    },
+    "loading_from_eurostat": {
+        "de": "Lade Daten von Eurostat...",
+        "en": "Loading data from Eurostat..."
+    },
+    "creating_text": {
+        "de": "Erstelle Text...",
+        "en": "Creating text..."
+    },
+    "no_data": {
+        "de": "Für den ausgewählten Monat liegen keine Daten vor.",
+        "en": "There is no data available for the selected month."
+    },
+    "success": {
+        "de": "Der Text wurde erfolgreich erstellt.",
+        "en": "The text was generated successfully."
+    }
+}

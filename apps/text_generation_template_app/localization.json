@@ -1,0 +1,14 @@
+{
+    "updating_template": {
+        "de":"Aktualisiere Template...", 
+        "en": "Updating template..."
+    },
+    "error": {
+        "de": "Fehler beim Aktualisieren des Templates.",
+        "en": "Error updating template."
+    },
+    "success": {
+        "de": "Template erfolgreich aktualisiert.",
+        "en": "Template successfully updated."
+    }
+}

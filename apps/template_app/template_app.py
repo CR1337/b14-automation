@@ -13,12 +13,6 @@ class TemplateApp(App):
     # The second one is optional but recommended.
     # 
     # The documentation for this you you can find in `doc/creating_a_new_app.md`
-
-    def initialize(self, language: str):
-        # Here you can initialize your app. You also have access to the language 
-        # set in the streamlits sidebar. You can set the apps language property
-        # if you want to use it. It defaults to `None`.
-        self.language = language
     
     def run(self):
         # Here your app does all of its work. You can read user input with
@@ -42,21 +36,15 @@ class TemplateApp(App):
         # If you want to use code shared acorss multiple apps put it into the
         # `lib` directory and import it from there.
         assert self.messenger is not None
-        self.messenger.set_message(self.get_translations("reading_name"))
+        self.messenger.set_message_key("reading_name")
         time.sleep(2)
         name = self.get_input("name")
-        self.messenger.set_message(self.get_translations("creating_greeting"))
+        self.messenger.set_message_key("creating_greeting")
         time.sleep(2)
-        greeting = self.get_translation("hello").format(name=name)
-        self.messenger.set_message(self.get_translations("outputting_greeting"))
+        greeting = self.localization.get_translation("hello").format(name=name)
+        self.messenger.set_message_key("outputting_greeting")
         time.sleep(2)
         self.set_output("greeting", greeting)
-    
-    def destroy(self):
-        # Here you cleanup after your app. You can clear the status message
-        # using `self.messenger.clear_message` for example.
-        assert self.messenger is not None
-        self.messenger.clear_message()
 
     @staticmethod
     def input_validators() -> ValidatorSet:

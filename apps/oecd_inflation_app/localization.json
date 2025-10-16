@@ -1,0 +1,14 @@
+{
+    "generating_table": {
+        "de":"Generiere Tabelle...", 
+        "en": "Generating Table..."
+    },
+    "no_data": {
+        "de": "Für den ausgewählten Monat liegen keine Daten vor.",
+        "en": "There is no data available for the selected month."
+    },
+    "success": {
+        "de": "Die Tabelle wurde erfolgreich erstellt.",
+        "en": "The table was generated successfully."
+    }
+}
