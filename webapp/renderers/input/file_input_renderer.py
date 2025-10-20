@@ -14,7 +14,7 @@ class FileInputRenderer(Renderer):
             key=app_io.key
         )
         if file:
-            if app_io.type == AppIOType.FILE:
-                app_io.value = file.getvalue().decode(app_io.parameters.get("encoding", "utf-8"))
+            if app_io.type_ == AppIOType.FILE:
+                return file.getvalue().decode(app_io.parameters.get("encoding", "utf-8"))
             else:
-                app_io.value = file.getvalue()
+                return file.getvalue()

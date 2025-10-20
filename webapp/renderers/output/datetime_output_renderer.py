@@ -9,7 +9,7 @@ class DatetimeOutputRenderer(Renderer):
     def render(self, app_io: Any):
         st.text_input(
             label=app_io.name[self.language.key],
-            value=datetime.strftime(app_io.value, "%Y-%m-%d %H:%M"),
+            value=datetime.strftime(app_io.value.get(), "%Y-%m-%d %H:%M"),
             key=app_io.key,
             disabled=True
         )

@@ -9,7 +9,7 @@ class StringOutputRenderer(Renderer):
         if app_io.parameters.get("multiline", False):
             st.text_area(
                 label=app_io.name[self.language.key],
-                value=str(app_io.value),
+                value=str(app_io.value.get()),
                 key=app_io.key,
                 disabled=True,
                 height="content"  # type: ignore
@@ -17,7 +17,7 @@ class StringOutputRenderer(Renderer):
         else:
             st.text_input(
                 label=app_io.name[self.language.key],
-                value=str(app_io.value),
+                value=str(app_io.value.get()),
                 key=app_io.key,
                 disabled=True
             )

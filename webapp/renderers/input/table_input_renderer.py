@@ -14,8 +14,10 @@ class TableInputRenderer(Renderer):
             key=app_io.key
         )
         if file:
-            app_io.value = pd.read_csv(
+            return pd.read_csv(
                 file,
                 sep=app_io.parameters.get("sep"),
                 delimiter=app_io.parameters.get("delimiter")
             )
+        else:
+            pd.DataFrame()

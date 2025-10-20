@@ -8,7 +8,7 @@ class SelectionInputRenderer(Renderer):
     def render(self, app_io: Any):
         options = app_io.parameters.get("options", {"de": [], "en": []})[self.language.key]
         try:
-            index = app_io.value
+            index = app_io.value.get()
         except ValueError:
             index = 0
         selection = st.selectbox(
@@ -17,4 +17,6 @@ class SelectionInputRenderer(Renderer):
             index=index,
             key=app_io.key
         )
-        app_io.value = options.index(selection)
+        if selection is None:
+            return index
+        return options.index(selection)

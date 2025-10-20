@@ -10,5 +10,5 @@ class Renderer(ABC):
         return Localization.get_current_language()
     
     @abstractmethod
-    def render(self, app_io: Any):
+    def render(self, app_io: Any) -> Any:
         raise NotImplementedError("@abstractmethod")

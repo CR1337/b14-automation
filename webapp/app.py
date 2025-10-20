@@ -15,6 +15,8 @@ class App(ABC, FileAccessMixin):
     _outputs: Dict[str, AppIO]
     _name: Dict[str, str]
     _authentication_required: bool
+    _input_key_mappings: Dict[str, str]
+    _output_key_mappings: Dict[str, str]
     
     localization: Localization
     messenger: AppMessenger | None
@@ -48,31 +50,41 @@ class App(ABC, FileAccessMixin):
     def __repr__(self) -> str:
         return f"App({self._name=}, {self.key=}, {len(self._inputs)=}, {len(self._outputs)=}"
 
-    def __init__(self, name: Dict[str, str], authentication_required: bool, inputs: List[AppIO], outputs: List[AppIO]):
+    def __init__(
+        self, 
+        name: Dict[str, str], 
+        authentication_required: bool, 
+        inputs: List[AppIO], 
+        outputs: List[AppIO], 
+        input_key_mappings: Dict[str, str], 
+        output_key_mappings: Dict[str, str]
+    ):
         self._name = name
         self._authentication_required = authentication_required
         self._inputs = {x.key: x for x in inputs}
         self._outputs = {x.key: x for x in outputs}
+        self._input_key_mappings = input_key_mappings
+        self._output_key_mappings = output_key_mappings
         self.messenger = None
         self.localization = Localization(self.localization_filename)
 
     def _set_app_io_value(self, key: str, value: Any | None, app_ios: Dict[str, AppIO]):
         app_io = app_ios[key]
-        app_io.value = value
+        app_io.value.set(value)
         if not app_io.validate():
             raise ValueError(f"Invalid value for AppIO {key}: {value}")
 
     def set_input(self, key: str, value: Any | None):
-        self._set_app_io_value(key, value, self._inputs)
+        self._set_app_io_value(self._input_key_mappings[key], value, self._inputs)
 
     def get_input(self, key: str) -> Any | None:
-        return self._inputs[key].value
+        return self._inputs[self._input_key_mappings[key]].value.get()
         
     def set_output(self, key: str, value: Any | None):
-        self._set_app_io_value(key, value, self._outputs)
+        self._set_app_io_value(self._output_key_mappings[key], value, self._outputs)
 
     def get_output(self, key: str) -> Any | None:
-        return self._outputs[key].value
+        return self._outputs[self._output_key_mappings[key]].value.get()
     
     def set_messenger(self, messenger: AppMessenger):
         self.messenger = messenger

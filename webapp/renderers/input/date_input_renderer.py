@@ -7,9 +7,9 @@ from webapp.renderers.renderer import Renderer
 class DateInputRenderer(Renderer):
 
     def render(self, app_io: Any):
-        app_io.value = st.date_input(
+        return st.date_input(
             label=app_io.name[self.language.key],
-            value=app_io.value,
+            value=app_io.value.get(),
             min_value=app_io.parameters.get("min_value"),
             max_value=app_io.parameters.get("max_value"),
             format=app_io.parameters.get("format", "YYYY-MM-DD"),

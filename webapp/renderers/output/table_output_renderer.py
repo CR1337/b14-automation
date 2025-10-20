@@ -7,6 +7,6 @@ class TableOutputRenderer(Renderer):
 
     def render(self, app_io: Any):
         st.dataframe(
-            data=app_io.value,
+            data=app_io.value.get(),
             key=app_io.key
         )

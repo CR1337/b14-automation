@@ -14,7 +14,7 @@ class FileOutputRenderer(Renderer):
             filename = f"{datetime.now().strftime('%Y%m%d_%H%M%S')}_{filename}"
         st.download_button(
             label=app_io.name[self.language.key],
-            data=str(app_io.value),
+            data=str(app_io.value.get()),
             file_name=filename,
             mime=app_io.parameters.get("mime", "text/plain"),
             key=app_io.key,

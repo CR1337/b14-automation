@@ -4,6 +4,7 @@ from datetime import datetime, date, time
 import pandas as pd
 import inspect
 from webapp.app_io.app_io_type import AppIOType
+from webapp.app_io.app_io_value import AppIoValue
 from webapp.renderers import Renderer, BoolInputRenderer, IntegerInputRenderer, FloatInputRenderer, StringInputRenderer, DatetimeInputRenderer, DateInputRenderer, TimeInputRenderer, SelectionInputRenderer, FileInputRenderer, TableInputRenderer, BoolOutputRenderer, StringOutputRenderer, DatetimeOutputRenderer, DateOutputRenderer, TimeOutputRenderer, FileOutputRenderer, BinaryFileOutputRenderer, TableOutputRenderer
 
 
@@ -11,7 +12,7 @@ from webapp.renderers import Renderer, BoolInputRenderer, IntegerInputRenderer, 
 class AppIO:
     key: str
     name: Dict[str, str]
-    type: AppIOType
+    type_: AppIOType
 
     is_input: bool
 
@@ -22,7 +23,7 @@ class AppIO:
     parameters: Dict[str, Any]
 
     renderer: Renderer
-    value: Any
+    value: AppIoValue
 
     TYPES: ClassVar[Dict[AppIOType, Type]] = {
         AppIOType.BOOL: bool,
@@ -92,14 +93,14 @@ class AppIO:
         return {
             "key": self.key,
             "name": self.name,
-            "type": str(self.type),
+            "type": str(self.type_),
             "is_input": self.is_input,
             "can_be_none": self.can_be_none,
             "default": str(self.default),
             "validator": inspect.getsource(self.validator),
             "parameters": self.parameters,
-            "value_type": str(type(self.value)),
-            "value": str(self.value)
+            "value_type": str(self.type_),
+            "value": str(self.value.get())
         }
 
     @classmethod
@@ -107,33 +108,33 @@ class AppIO:
         cls,
         key: str,
         name: Dict[str, str],
-        type: AppIOType,
+        type_: AppIOType,
         can_be_none: bool = False,
         default: Any | None = None,
         validator: Callable[[Any], bool] | None = None,
         parameters: Dict[str, Any] | None = None
     ):
-        return cls._make(key, name, type, True, can_be_none, default, validator, parameters or {})
+        return cls._make(key, name, type_, True, can_be_none, default, validator, parameters or {})
 
     @classmethod
     def make_output(
         cls,
         key: str,
         name: Dict[str, str],
-        type: AppIOType,
+        type_: AppIOType,
         can_be_none: bool = False,
         default: Any | None = None,
         validator: Callable[[Any], bool] | None = None,
         parameters: Dict[str, Any] | None = None
     ):
-        return cls._make(key, name, type, False, can_be_none, default, validator, parameters or {})
+        return cls._make(key, name, type_, False, can_be_none, default, validator, parameters or {})
 
     @classmethod
     def _make(
         cls,
         key: str,
         name: Dict[str, str],
-        type: AppIOType,
+        type_: AppIOType,
         is_input: bool,
         can_be_none: bool,
         default: Any | None,
@@ -146,22 +147,25 @@ class AppIO:
                     f"Invalid default value for AppIO {key}: {default}"
                 )
 
-        renderer = (cls.INPUT_RENDERERS[type] if is_input else cls.OUTPUT_RENDERERS[type])()
+        renderer = (cls.INPUT_RENDERERS[type_] if is_input else cls.OUTPUT_RENDERERS[type_])()
 
-        if type == AppIOType.SELECTION:
+        if type_ == AppIOType.SELECTION:
             default = default or 0
+
+        value = AppIoValue(key, type_, parameters)
+        value.set(default)
 
         return cls(
             key=key,
             name=name,
-            type=type,
+            type_=type_,
             is_input=is_input,
             can_be_none=can_be_none,
             default=default,
             validator=validator or (lambda _: True),
             parameters=parameters,
             renderer=renderer,
-            value=default
+            value=value
         )
 
     @property
@@ -169,20 +173,21 @@ class AppIO:
         return not self.is_input
     
     def __repr__(self) -> str:
-        return f"{self.key=}, {self.name=}, {self.type=}, {self.is_input=}"
+        return f"{self.key=}, {self.name=}, {self.type_=}, {self.is_input=}"
 
     def validate(self) -> bool:
-        if self.can_be_none and self.value is None:
+        if self.can_be_none and self.value.get() is None:
             return True
-        if not isinstance(self.value, self.TYPES[self.type]):
+        if not isinstance(self.value.get(), self.TYPES[self.type_]):
             return False
-        return self.validator(self.value)
+        return self.validator(self.value.get())
     
     def render_input(self) -> Tuple[bool, bool]:
-        old_value = self.value
-        self.renderer.render(self)
+        old_value = self.value.get()
+        new_value = self.renderer.render(self)
         is_valid = self.validate()
-        return is_valid, old_value != self.value
+        self.value.set(new_value)
+        return is_valid, old_value != new_value
 
     def render_output(self):
         self.renderer.render(self)

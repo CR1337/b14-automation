@@ -14,17 +14,17 @@ class StringInputRenderer(Renderer):
 
 
         if app_io.parameters.get("multiline", False):
-            app_io.value = st.text_area(
+            return st.text_area(
                 label=app_io.name[self.language.key], 
-                value=value or app_io.value, 
+                value=value or app_io.value.get(), 
                 max_chars=app_io.parameters.get("max_chars"),
                 key=app_io.key,
                 placeholder=app_io.parameters.get("placeholder")
             )
         else:
-            app_io.value = st.text_input(
+            return st.text_input(
                 label=app_io.name[self.language.key], 
-                value=value or app_io.value, 
+                value=value or app_io.value.get(), 
                 max_chars=app_io.parameters.get("max_chars"),
                 key=app_io.key,
                 type=app_io.parameters.get("type", "default"),

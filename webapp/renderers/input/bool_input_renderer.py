@@ -6,8 +6,8 @@ from webapp.renderers.renderer import Renderer
 class BoolInputRenderer(Renderer):
 
     def render(self, app_io: Any):
-        app_io.value = st.checkbox(
+        return st.checkbox(
             label=app_io.name[self.language.key],
-            value=bool(app_io.value),
+            value=bool(app_io.value.get()),
             key=app_io.key
         )
