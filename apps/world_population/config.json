@@ -25,12 +25,40 @@
             "type": "table"
         },
         {
+            "key": "weo_file",
+            "name": {
+                "de": "WEO Daten als Datei herunterladen",
+                "en": "Download WEO data as file"
+            },
+            "type": "file",
+            "parameters": {
+                "filename": "weo_data.csv",
+                "mime": "text/csv",
+                "prefix_datetime": true,
+                "prefix_language": true
+            }
+        },
+        {
             "key": "wdi_data",
             "name": {
                 "de": "WDI Daten",
                 "en": "WDI data"
             },
             "type": "table"
+        },
+        {
+            "key": "wdi_file",
+            "name": {
+                "de": "WDI Daten als Datei herunterladen",
+                "en": "Download WDI data as file"
+            },
+            "type": "file",
+            "parameters": {
+                "filename": "wdi_data.csv",
+                "mime": "text/csv",
+                "prefix_datetime": true,
+                "prefix_language": true
+            }
         }
     ]
 }

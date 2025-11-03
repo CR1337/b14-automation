@@ -1,5 +1,6 @@
 from webapp.app import App, ValidatorSet
 import pandas as pd
+from io import StringIO
 
 from lib.wdi.wdi import Wdi
 from lib.sdmx.data_loader import SdmxDataKey, SdmxDataLoader
@@ -20,6 +21,7 @@ class WorldPopulationApp(App):
         weo_parameters = {"startPeriod": 2020}
         try:
             weo_df = weo_loader.load("WEO", weo_key, weo_parameters)
+            weo_df = weo_df.reset_index()
         except Exception:
             weo_df = pd.DataFrame()
             success = False
@@ -37,6 +39,7 @@ class WorldPopulationApp(App):
                 ],
                 start_year=2020
             )
+            wdi_df = wdi_df.reset_index()
         except Exception:
             wdi_df = pd.DataFrame()
             success = False
@@ -44,6 +47,14 @@ class WorldPopulationApp(App):
         self.messenger.set_message_key("preparing_result")
         self.set_output("weo_data", weo_df)
         self.set_output("wdi_data", wdi_df)
+
+        weo_csv_buffer = StringIO()
+        weo_df.to_csv(weo_csv_buffer, sep=";", index=False)
+        self.set_output("weo_file", weo_csv_buffer.getvalue())
+
+        wdi_csv_buffer = StringIO()
+        wdi_df.to_csv(wdi_csv_buffer, sep=";", index=False)
+        self.set_output("wdi_file", wdi_csv_buffer.getvalue())
 
         status = self.localization.get_translation("success" if success else "error")
         self.set_output("status", status)
