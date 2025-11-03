@@ -1,15 +1,17 @@
 from typing import Dict
-from threading import Lock, Event
+from threading import Event
+from webapp.localization import Localization
+
 
 class AppMessenger:
     
-    _lock: Lock
-    message: Dict[str, str]
+    _localization: Localization
+    _message_key: str | None
     _is_done: Event
 
-    def __init__(self):
-        self._lock = Lock()
-        self.message = {}
+    def __init__(self, localization: Localization):
+        self._localization = localization
+        self._message_key = None
         self._is_done = Event()
 
     def set_is_done(self):
@@ -19,25 +21,17 @@ class AppMessenger:
     def is_done(self) -> bool:
         return self._is_done.is_set()
 
-    def get_message(self, language: str) -> str:
-        # TODO: make this nicer
-        if language not in self.message:
-            if "de" in self.message:
-                return self.message["de"]
-            elif "en" in self.message:
-                return self.message["en"]
-            elif len(self.message) > 0:
-                return self.message[list(self.message.keys())[0]]
-            else:
-                return ""
-        else:
-            return self.message[language]
-        
-    def set_message(self, message: Dict[str, str]):
-        self.message = message
+    @property
+    def message(self) -> str:
+        if self._message_key is None:
+            return ""
+        return self._localization.get_translation(self._message_key) or ""
 
-    def clear_message(self):
-        self.message = {}
-    
+    def set_message_key(self, key: str):
+        self._message_key = key
+
+    def clear_message_key(self):
+        self._message_key = None
+
 
 MESSENGERS: Dict[str, AppMessenger] = {}

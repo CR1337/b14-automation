@@ -9,15 +9,14 @@ from lib.eu_tables_by_topic.eu_tables_by_topic import build_tables
 
 class EuTablesByTopicApp(App):
 
-    def initialize(self, language: str):
+    def initialize(self):
         assert self.messenger is not None
-        self.language = language
-        self.messenger.set_message(self.get_translations("initializing"))
+        self.messenger.set_message_key("initializing")
         time.sleep(1)
     
     def run(self):
         assert self.messenger is not None
-        self.messenger.set_message(self.get_translations("generating_tables"))
+        self.messenger.set_message_key("generating_tables")
 
         language = self.get_input("language_selection")
         match language:
@@ -38,13 +37,8 @@ class EuTablesByTopicApp(App):
         zip_buffer.seek(0)
         zip_bytes = zip_buffer.getvalue()
 
-        self.set_output("status", self.get_translation("status_success"))
+        self.set_output("status", self.localization.get_translation("status_success"))
         self.set_output("file", zip_bytes)
-        
-    
-    def destroy(self):
-        assert self.messenger is not None
-        self.messenger.clear_message()
 
     @staticmethod
     def input_validators() -> Dict[str, Callable[[Any], bool]]:

@@ -7,19 +7,11 @@ from typing import Dict, Callable, Any
 class TextGenerationTemplateApp(App):
 
     TEMPLATE_FILENAME: str = "data/erwerbslosigkeit_template.txt"
-
-    def initialize(self, language: str):
-        assert self.messenger is not None
-        self.language = language        
     
     def run(self):
         assert self.messenger is not None
 
-        self.messenger.set_message({
-            "de":"Aktualisiere Template...", 
-            "en": "Updating template..."
-        })
-
+        self.messenger.set_message_key("updating_template")
 
         template = self.get_input("template")
         storage = GithubStorage(self.TEMPLATE_FILENAME)
@@ -31,18 +23,9 @@ class TextGenerationTemplateApp(App):
         
         assert isinstance(template, str)
         success = storage.store_content(template)
-        if not success:
-            self.set_output("status", "Error updating template.")
 
-        if self.language == "de":
-            self.set_output("status", "Template erfolgreich aktualisiert.")
-        else:
-            self.set_output("status", "Template successfully updated.")
-        
-    
-    def destroy(self):
-        assert self.messenger is not None
-        self.messenger.clear_message()
+        status = self.localization.get_translation("success" if success else "error")
+        self.set_output("status", status)
 
     @staticmethod
     def input_validators() -> Dict[str, Callable[[Any], bool]]:

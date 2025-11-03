@@ -38,5 +38,13 @@
     "password": {
         "de": "Passwort",
         "en": "Password"
+    },
+    "yes": {
+        "de": "Ja",
+        "en": "Yes"
+    },
+    "no": {
+        "de": "Nein",
+        "en": "No"
     }
 }

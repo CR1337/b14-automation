@@ -1,0 +1,22 @@
+{
+    "loading_weo_data": {
+        "de": "Lade WEO Daten...",
+        "en": "Loading WEO data..."
+    },
+    "loading_wdi_data": {
+        "de": "Lade WDI Daten...",
+        "en": "Loading WDI data..."
+    },
+    "preparing_result": {
+        "de": "Erstelle Ergebnis...",
+        "en": "Preparing result..."
+    },
+    "error": {
+        "de": "Fehler beim Laden der Daten.",
+        "en": "Error loading the data."
+    },
+    "success": {
+        "de": "Daten erfolgreich geladen.",
+        "en": "Data succesfully loaded."
+    }
+}
