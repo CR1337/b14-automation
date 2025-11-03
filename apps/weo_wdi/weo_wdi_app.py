@@ -6,7 +6,7 @@ from lib.wdi.wdi import Wdi
 from lib.sdmx.data_loader import SdmxDataKey, SdmxDataLoader
 
 
-class WorldPopulationApp(App):
+class WeoWdiApp(App):
    
     def run(self):
         assert self.messenger is not None
