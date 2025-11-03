@@ -1,0 +1,36 @@
+{
+    "name": {
+        "de": "WEO/WDI",
+        "en": "WEO/WDI"
+    },
+    "authentication_required": false,
+    "inputs": [
+
+    ],
+    "outputs": [
+        {
+            "key": "status",
+            "name": {
+                "de": "Statusnachricht",
+                "en": "Status Message"
+            },
+            "type": "str"
+        },
+        {
+            "key": "weo_data",
+            "name": {
+                "de": "WEO Daten",
+                "en": "WEO data"
+            },
+            "type": "table"
+        },
+        {
+            "key": "wdi_data",
+            "name": {
+                "de": "WDI Daten",
+                "en": "WDI data"
+            },
+            "type": "table"
+        }
+    ]
+}

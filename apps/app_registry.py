@@ -9,6 +9,7 @@ from apps.oecd_inflation_app.oecd_inflation_app import OecdInflationApp
 from apps.eu_tables_by_topic_app.eu_tables_by_topic_app import EuTablesByTopicApp
 from apps.eu_tables_by_country_app.eu_tables_by_country_app import EuTablesByCountryApp
 from apps.text_generation_template_app.text_generation_template_app import TextGenerationTemplateApp
+from apps.world_population.world_population_app import WorldPopulationApp
 
 # Next you add the App to this List:
 app_classes: List[Type[App]] = [
@@ -16,7 +17,8 @@ app_classes: List[Type[App]] = [
     OecdInflationApp,
     EuTablesByTopicApp,
     EuTablesByCountryApp,
-    TextGenerationTemplateApp
+    TextGenerationTemplateApp,
+    WorldPopulationApp,
 ]
 
 apps: List[App] = [
