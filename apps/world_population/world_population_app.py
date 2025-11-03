@@ -21,6 +21,7 @@ class WorldPopulationApp(App):
         weo_parameters = {"startPeriod": 2020}
         try:
             weo_df = weo_loader.load("WEO", weo_key, weo_parameters)
+            weo_df = weo_df.reset_index()
         except Exception:
             weo_df = pd.DataFrame()
             success = False
@@ -38,6 +39,7 @@ class WorldPopulationApp(App):
                 ],
                 start_year=2020
             )
+            wdi_df = wdi_df.reset_index()
         except Exception:
             wdi_df = pd.DataFrame()
             success = False

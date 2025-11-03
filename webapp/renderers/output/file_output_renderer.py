@@ -9,7 +9,7 @@ class FileOutputRenderer(Renderer):
     def render(self, app_io: Any):
         filename = app_io.parameters.get("filename", "data.txt")
         if app_io.parameters.get("prefix_language", False):
-            filename = f"{self.language}_{filename}"
+            filename = f"{self.language.name}_{filename}"
         if app_io.parameters.get("prefix_datetime", False):
             filename = f"{datetime.now().strftime('%Y%m%d_%H%M%S')}_{filename}"
         st.download_button(
